@@ -15,7 +15,8 @@ Pure static HTML / CSS / JS — no build step, no framework. Hosted on GitHub Pa
 |---|---|
 | `index.html` | Single page: hero, experience, interactive menu + session ticket, gallery, reviews, Booksy booking, studio map, FAQ |
 | `css/style.css` | Design system (obsidian + champagne gold, Bebas Neue / Playfair / Manrope) and all animations |
-| `js/main.js` | **Data lives here** (services, gallery, reviews) plus interactions |
+| `js/main.js` | **Data lives here** (services, gallery, reviews — each with an `es` block) plus interactions |
+| `js/i18n.js` | **Spanish copy** for every static string, plus the EN/ES toggle runtime |
 | `assets/img/work/` | Portfolio photos (from Jordy's Booksy profile), web-sized, with `-sm` thumbnails |
 | `assets/og.jpg` | Social share card |
 | `MARKET-RESEARCH.md` | Annapolis / DMV comparables and pricing recommendations |
@@ -29,6 +30,14 @@ Three ways the site connects to Booksy (business ID `1071238`):
 3. **Session builder** — clients pick services on the site, see time and total, then hand off to Booksy.
 
 If Jordy ever moves Booksy accounts, change `BOOKSY_ID` and `BOOKSY_URL` at the top of `js/main.js`.
+
+## Language toggle (EN / ES)
+
+The nav (and the mobile menu) has an EN / ES switch. Spanish is picked automatically for browsers set to Spanish, and the choice is remembered. Switching also flips every Booksy link to `booksy.com/es-us/…` and reloads the booking widget in Spanish.
+
+- Static text: every translatable element has a `data-i18n="key"`; English is whatever is in `index.html`, Spanish is the matching key in `js/i18n.js` (`I18N_ES`).
+- Data-driven text (services, gallery captions, house-call row): the `es` fields in `js/main.js`.
+- Reviews stay in the language clients wrote them.
 
 ## Editing content
 

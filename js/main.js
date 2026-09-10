@@ -1,6 +1,8 @@
 /* =====================================================================
    JORDY CUTZ — main.js
    Edit the DATA block to update services, photos, and reviews.
+   Spanish copy for static HTML lives in js/i18n.js; data below carries
+   its own `es` fields.
    ===================================================================== */
 
 const BOOKSY_ID = 1071238;
@@ -9,38 +11,48 @@ const BOOKSY_URL = 'https://booksy.com/en-us/1071238_j-barber-1_barber-shop_2253
 /* ---------- DATA ---------- */
 // Prices and durations mirror the Booksy menu. Keep them in sync when Jordy changes them.
 const SERVICES = [
-  { id: 'fade',    cat: 'cuts',   name: 'Fade',                     sub: 'Low · Mid · High',        price: 40, mins: 40, tag: 'Most booked', desc: 'Clean, modern, seamless — short to long with no lines.' },
-  { id: 'taper',   cat: 'cuts',   name: 'Taper',                    sub: 'Low · Mid · High',        price: 40, mins: 35, desc: 'Tight around the edges, weight kept up top.' },
-  { id: 'hb',      cat: 'beard',  name: 'Haircut & Beard',          sub: 'Hot towel steam',         price: 50, mins: 45, tag: 'Signature', desc: 'Fade + beard alignment, steam, hot towel massage, razor finish.' },
-  { id: 'regular', cat: 'cuts',   name: 'Regular Haircut',          sub: '#1 or #2 all around',     price: 30, mins: 25, desc: 'Even, sharp, done right.' },
-  { id: 'beardm',  cat: 'beard',  name: 'Beard Maintenance',        sub: 'Profiled + hot towel',    price: 25, mins: 25, desc: 'Shape, profile and a hot towel massage.' },
-  { id: 'beardt',  cat: 'beard',  name: 'Beard Trim',               sub: 'Quick clean',             price: 10, mins: 15, desc: 'Length down, edges tidy.' },
-  { id: 'shave',   cat: 'beard',  name: 'Shave',                    sub: 'Razor or shaver',         price: 30, mins: 20, desc: 'Close, clean, no irritation.' },
-  { id: 'lineup',  cat: 'cuts',   name: 'Line Up',                  sub: 'Around the head',         price: 25, mins: 30, desc: 'Crisp edges, hairline to nape.' },
-  { id: 'design',  cat: 'design', name: 'Design + Fade',            sub: 'Any design',              price: 50, mins: 55, tag: 'Custom', desc: 'Lines, arrows, logos, lettering — bring the idea.' },
-  { id: 'kids',    cat: 'kids',   name: 'Kids Haircut',             sub: 'Regular or fade',         price: 30, mins: 30, desc: 'Patient, clean, and quick for the little ones.' },
+  { id: 'fade',    cat: 'cuts',   price: 40, mins: 40, tag: 'Most booked', name: 'Fade',              sub: 'Low · Mid · High',     desc: 'Clean, modern, seamless — short to long with no lines.',
+    es: { tag: 'El más pedido', name: 'Fade', sub: 'Low · Mid · High', desc: 'Limpio, moderno, sin marcas — de corto a largo sin líneas.' } },
+  { id: 'taper',   cat: 'cuts',   price: 40, mins: 35, name: 'Taper',             sub: 'Low · Mid · High',     desc: 'Tight around the edges, weight kept up top.',
+    es: { name: 'Taper', sub: 'Low · Mid · High', desc: 'Ajustado en los bordes, con volumen arriba.' } },
+  { id: 'hb',      cat: 'beard',  price: 50, mins: 45, tag: 'Signature', name: 'Haircut & Beard',   sub: 'Hot towel steam',      desc: 'Fade + beard alignment, steam, hot towel massage, razor finish.',
+    es: { tag: 'De la casa', name: 'Corte y Barba', sub: 'Vapor y toalla caliente', desc: 'Fade + alineación de barba, vapor, masaje con toalla caliente, acabado a navaja.' } },
+  { id: 'regular', cat: 'cuts',   price: 30, mins: 25, name: 'Regular Haircut',   sub: '#1 or #2 all around',  desc: 'Even, sharp, done right.',
+    es: { name: 'Corte Regular', sub: '#1 o #2 parejo', desc: 'Parejo, limpio, bien hecho.' } },
+  { id: 'beardm',  cat: 'beard',  price: 25, mins: 25, name: 'Beard Maintenance', sub: 'Profiled + hot towel', desc: 'Shape, profile and a hot towel massage.',
+    es: { name: 'Mantenimiento de Barba', sub: 'Perfilado + toalla caliente', desc: 'Forma, perfilado y masaje con toalla caliente.' } },
+  { id: 'beardt',  cat: 'beard',  price: 10, mins: 15, name: 'Beard Trim',        sub: 'Quick clean',          desc: 'Length down, edges tidy.',
+    es: { name: 'Recorte de Barba', sub: 'Rápido y limpio', desc: 'Baja el largo, bordes limpios.' } },
+  { id: 'shave',   cat: 'beard',  price: 30, mins: 20, name: 'Shave',             sub: 'Razor or shaver',      desc: 'Close, clean, no irritation.',
+    es: { name: 'Afeitado', sub: 'Navaja o máquina', desc: 'Al ras, limpio, sin irritación.' } },
+  { id: 'lineup',  cat: 'cuts',   price: 25, mins: 30, name: 'Line Up',           sub: 'Around the head',      desc: 'Crisp edges, hairline to nape.',
+    es: { name: 'Line Up', sub: 'Toda la cabeza', desc: 'Bordes definidos, de la frente a la nuca.' } },
+  { id: 'design',  cat: 'design', price: 50, mins: 55, tag: 'Custom', name: 'Design + Fade',     sub: 'Any design',           desc: 'Lines, arrows, logos, lettering — bring the idea.',
+    es: { tag: 'Personalizado', name: 'Diseño + Fade', sub: 'Cualquier diseño', desc: 'Líneas, flechas, logos, letras — trae la idea.' } },
+  { id: 'kids',    cat: 'kids',   price: 30, mins: 30, name: 'Kids Haircut',      sub: 'Regular or fade',      desc: 'Patient, clean, and quick for the little ones.',
+    es: { name: 'Corte para Niños', sub: 'Regular o fade', desc: 'Con paciencia, limpio y rápido para los pequeños.' } },
 ];
 
 const GALLERY = [
-  { src: 'fade-moody',    cap: 'Skin fade',         type: 'Fade' },
-  { src: 'design-cross',  cap: 'Cross design',      type: 'Design' },
-  { src: 'beard-lineup',  cap: 'Beard & line up',   type: 'Beard' },
-  { src: 'fade-curls',    cap: 'Fade, curls up top', type: 'Fade' },
-  { src: 'hot-towel',     cap: 'Hot towel steam',   type: 'Ritual' },
-  { src: 'design-side',   cap: 'Side design',       type: 'Design' },
-  { src: 'braids-lineup', cap: 'Braids, edged',     type: 'Line up' },
-  { src: 'fringe-fade',   cap: 'Fringe fade',       type: 'Fade' },
-  { src: 'kid-design',    cap: 'Kids design',       type: 'Kids' },
-  { src: 'slick-taper',   cap: 'Slick back taper',  type: 'Taper' },
-  { src: 'design-w',      cap: 'Freehand design',   type: 'Design' },
-  { src: 'fade-beard',    cap: 'Fade & beard',      type: 'Signature' },
-  { src: 'side-part',     cap: 'Hard part taper',   type: 'Taper' },
-  { src: 'beard-sculpt',  cap: 'Beard sculpt',      type: 'Beard' },
-  { src: 'gold-chair',    cap: 'Clean shave',       type: 'Shave' },
-  { src: 'jordy-at-work', cap: 'Jordy, detailing',  type: 'Studio' },
+  { src: 'fade-moody',    cap: 'Skin fade',          type: 'Fade',      es: { cap: 'Skin fade',           type: 'Fade' } },
+  { src: 'design-cross',  cap: 'Cross design',       type: 'Design',    es: { cap: 'Diseño de cruz',      type: 'Diseño' } },
+  { src: 'beard-lineup',  cap: 'Beard & line up',    type: 'Beard',     es: { cap: 'Barba y line up',     type: 'Barba' } },
+  { src: 'fade-curls',    cap: 'Fade, curls up top', type: 'Fade',      es: { cap: 'Fade con rizos',      type: 'Fade' } },
+  { src: 'hot-towel',     cap: 'Hot towel steam',    type: 'Ritual',    es: { cap: 'Vapor y toalla caliente', type: 'Ritual' } },
+  { src: 'design-side',   cap: 'Side design',        type: 'Design',    es: { cap: 'Diseño lateral',      type: 'Diseño' } },
+  { src: 'braids-lineup', cap: 'Braids, edged',      type: 'Line up',   es: { cap: 'Trenzas perfiladas',  type: 'Line up' } },
+  { src: 'fringe-fade',   cap: 'Fringe fade',        type: 'Fade',      es: { cap: 'Fade con flequillo',  type: 'Fade' } },
+  { src: 'kid-design',    cap: 'Kids design',        type: 'Kids',      es: { cap: 'Diseño para niños',   type: 'Niños' } },
+  { src: 'slick-taper',   cap: 'Slick back taper',   type: 'Taper',     es: { cap: 'Taper peinado atrás', type: 'Taper' } },
+  { src: 'design-w',      cap: 'Freehand design',    type: 'Design',    es: { cap: 'Diseño a mano alzada', type: 'Diseño' } },
+  { src: 'fade-beard',    cap: 'Fade & beard',       type: 'Signature', es: { cap: 'Fade y barba',        type: 'De la casa' } },
+  { src: 'side-part',     cap: 'Hard part taper',    type: 'Taper',     es: { cap: 'Taper con raya',      type: 'Taper' } },
+  { src: 'beard-sculpt',  cap: 'Beard sculpt',       type: 'Beard',     es: { cap: 'Barba esculpida',     type: 'Barba' } },
+  { src: 'gold-chair',    cap: 'Clean shave',        type: 'Shave',     es: { cap: 'Afeitado al ras',     type: 'Afeitado' } },
+  { src: 'jordy-at-work', cap: 'Jordy, detailing',   type: 'Studio',    es: { cap: 'Jordy, detallando',   type: 'Estudio' } },
 ];
 
-// Verbatim from Booksy.
+// Verbatim from Booksy (kept in the language they were written in).
 const REVIEWS = [
   { name: 'Kendrick', text: 'Hands down the best barber in town!' },
   { name: 'Peach',    text: 'J. Barber 1 is most knowledgeable, courteous, patient, and professional in his craft. He never misses!' },
@@ -58,6 +70,9 @@ const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+const I = window.JC_I18N;
+const T = key => I.t(key);
+const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ? obj.es[field] : obj[field];
 
 /* ---------- preloader ---------- */
 (() => {
@@ -87,14 +102,13 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
     requestAnimationFrame(loop);
   };
   loop();
-  const labels = { book: 'BOOK', drag: 'DRAG', link: '' };
   document.addEventListener('mouseover', e => {
     const t = e.target.closest('[data-cursor], a, button, summary');
     cur.className = 'cursor';
     if (!t) return;
     const kind = t.dataset.cursor || 'link';
     cur.classList.add(`is-${kind}`);
-    ring.dataset.label = labels[kind] || '';
+    ring.dataset.label = kind === 'book' ? T('js.cursorBook') : kind === 'drag' ? T('js.cursorDrag') : '';
   });
 })();
 
@@ -203,45 +217,45 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
 /* ---------- services + ticket ---------- */
 (() => {
   const list = $('#services');
-  const house = { id: 'house', name: 'Private House Call', desc: 'Any service above, delivered to your home, office or event. Travel included. Group and event rates available.' };
-  list.innerHTML = SERVICES.map(s => `
-    <li class="service" data-id="${s.id}" data-cat="${s.cat}" role="button" tabindex="0" aria-pressed="false">
-      <span class="service__check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L19 7"/></svg></span>
-      <div>
-        <div class="service__name">${s.name}${s.tag ? `<span class="service__tag">${s.tag}</span>` : ''}</div>
-        <div class="service__desc">${s.sub} — ${s.desc}</div>
-      </div>
-      <div class="service__meta"><div class="service__price">$${s.price}</div><div class="service__time">${s.mins} min</div></div>
-    </li>`).join('') + `
-    <li class="service service--house" data-cat="all">
-      <div>
-        <div class="service__name">${house.name}<span class="service__tag">Mobile</span></div>
-        <div class="service__desc">${house.desc}</div>
-      </div>
-      <div class="service__meta"><div class="service__price">Quoted per visit</div><div class="service__time">Book + add address</div></div>
-    </li>`;
-
   const selected = new Set();
+  let filter = 'all';
   const lines = $('#ticketLines'), tTime = $('#ticketTime'), tTotal = $('#ticketTotal'), houseCall = $('#houseCall'), houseNote = $('#houseNote'), book = $('#ticketBook');
   $('#ticketNo').textContent = String(Math.floor(1000 + Math.random() * 9000));
 
+  const renderList = () => {
+    list.innerHTML = SERVICES.map(s => `
+      <li class="service${selected.has(s.id) ? ' is-selected' : ''}${filter === 'all' || s.cat === filter ? '' : ' is-hidden'}" data-id="${s.id}" data-cat="${s.cat}" role="button" tabindex="0" aria-pressed="${selected.has(s.id)}">
+        <span class="service__check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L19 7"/></svg></span>
+        <div>
+          <div class="service__name">${L(s, 'name')}${s.tag ? `<span class="service__tag">${L(s, 'tag')}</span>` : ''}</div>
+          <div class="service__desc">${L(s, 'sub')} — ${L(s, 'desc')}</div>
+        </div>
+        <div class="service__meta"><div class="service__price">$${s.price}</div><div class="service__time">${s.mins} ${T('js.min')}</div></div>
+      </li>`).join('') + `
+      <li class="service service--house" data-cat="all">
+        <div>
+          <div class="service__name">${T('js.houseName')}<span class="service__tag">${T('js.houseTag')}</span></div>
+          <div class="service__desc">${T('js.houseDesc')}</div>
+        </div>
+        <div class="service__meta"><div class="service__price">${T('js.housePrice')}</div><div class="service__time">${T('js.houseTime')}</div></div>
+      </li>`;
+  };
+
   const money = n => `$${n}`;
-  const render = () => {
+  const renderTicket = () => {
     const items = SERVICES.filter(s => selected.has(s.id));
     if (!items.length) {
-      lines.innerHTML = '<p class="ticket__empty">Nothing yet. Tap a service to begin.</p>';
+      lines.innerHTML = `<p class="ticket__empty">${I.lang === 'es' ? window.I18N_ES['ticket.empty'] : 'Nothing yet. Tap a service to begin.'}</p>`;
     } else {
-      lines.innerHTML = items.map(s => `<div class="ticket__line"><span>${s.name}</span><small>${s.mins}m</small><span>${money(s.price)}</span></div>`).join('');
-      if (houseCall.checked) lines.innerHTML += `<div class="ticket__line"><span>House call · travel</span><small></small><span>quoted</span></div>`;
+      lines.innerHTML = items.map(s => `<div class="ticket__line"><span>${L(s, 'name')}</span><small>${s.mins}m</small><span>${money(s.price)}</span></div>`).join('');
+      if (houseCall.checked) lines.innerHTML += `<div class="ticket__line"><span>${T('js.houseLine')}</span><small></small><span>${T('js.quoted')}</span></div>`;
     }
     const mins = items.reduce((a, s) => a + s.mins, 0), total = items.reduce((a, s) => a + s.price, 0);
     const h = Math.floor(mins / 60), m = mins % 60;
-    tTime.textContent = mins ? (h ? `${h}h ${m ? m + 'm' : ''}`.trim() : `${m} min`) : '0 min';
+    tTime.textContent = mins ? (h ? `${h}h ${m ? m + 'm' : ''}`.trim() : `${m} ${T('js.min')}`) : `0 ${T('js.min')}`;
     tTotal.textContent = houseCall.checked && items.length ? `${money(total)}+` : money(total);
-    houseNote.textContent = houseCall.checked ? 'We come to you · travel quoted' : 'At the studio · 1407 Forest Dr.';
-    // deep link note for Booksy — services get chosen on Booksy itself
-    book.href = BOOKSY_URL;
-    localStorage.setItem('jc_session', JSON.stringify({ ids: [...selected], house: houseCall.checked }));
+    houseNote.textContent = houseCall.checked ? T('js.houseNoteHome') : T('js.houseNoteStudio');
+    try { localStorage.setItem('jc_session', JSON.stringify({ ids: [...selected], house: houseCall.checked })); } catch (_) {}
   };
 
   const toggleRow = row => {
@@ -249,46 +263,58 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
     selected.has(id) ? selected.delete(id) : selected.add(id);
     row.classList.toggle('is-selected', selected.has(id));
     row.setAttribute('aria-pressed', selected.has(id));
-    render();
+    renderTicket();
   };
   list.addEventListener('click', e => { const row = e.target.closest('.service'); if (row) toggleRow(row); });
   list.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { const row = e.target.closest('.service'); if (row) { e.preventDefault(); toggleRow(row); } } });
-  houseCall.addEventListener('change', render);
-  $('#ticketClear').addEventListener('click', () => { selected.clear(); $$('.service').forEach(r => { r.classList.remove('is-selected'); r.setAttribute('aria-pressed', 'false'); }); houseCall.checked = false; render(); });
+  houseCall.addEventListener('change', renderTicket);
+  $('#ticketClear').addEventListener('click', () => { selected.clear(); houseCall.checked = false; renderList(); renderTicket(); });
 
   // restore
   try {
     const saved = JSON.parse(localStorage.getItem('jc_session') || 'null');
-    if (saved) { saved.ids.forEach(id => { selected.add(id); const r = $(`.service[data-id="${id}"]`); if (r) { r.classList.add('is-selected'); r.setAttribute('aria-pressed', 'true'); } }); houseCall.checked = !!saved.house; }
+    if (saved) { saved.ids.forEach(id => selected.add(id)); houseCall.checked = !!saved.house; }
   } catch (_) {}
-  render();
 
   // filters
   $$('.chip').forEach(chip => chip.addEventListener('click', () => {
     $$('.chip').forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-selected', 'false'); });
     chip.classList.add('is-active'); chip.setAttribute('aria-selected', 'true');
-    const f = chip.dataset.filter;
-    $$('.service').forEach(r => r.classList.toggle('is-hidden', !(f === 'all' || r.dataset.cat === f || r.dataset.cat === 'all')));
+    filter = chip.dataset.filter;
+    $$('.service').forEach(r => r.classList.toggle('is-hidden', !(filter === 'all' || r.dataset.cat === filter || r.dataset.cat === 'all')));
   }));
+
+  renderList(); renderTicket();
+  I.onChange(() => { renderList(); renderTicket(); });
 })();
 
 /* ---------- gallery ---------- */
 (() => {
   const track = $('#galleryTrack'), gal = $('#gallery'), bar = $('#galBar');
-  track.innerHTML = GALLERY.map((g, i) => `
-    <figure class="gitem" data-i="${i}" tabindex="0" role="button" aria-label="Open photo: ${g.cap}">
-      <img src="assets/img/work/${g.src}-sm.jpg" alt="${g.cap} by Jordy Cutz" loading="lazy" decoding="async" draggable="false">
-      <figcaption class="gitem__cap"><span>${g.cap}</span><span>${g.type}</span></figcaption>
-    </figure>`).join('');
+  const renderGallery = () => {
+    track.innerHTML = GALLERY.map((g, i) => `
+      <figure class="gitem" data-i="${i}" tabindex="0" role="button" aria-label="${T('js.openPhoto')}: ${L(g, 'cap')}">
+        <img src="assets/img/work/${g.src}-sm.jpg" alt="${L(g, 'cap')} ${T('js.by')}" loading="lazy" decoding="async" draggable="false">
+        <figcaption class="gitem__cap"><span>${L(g, 'cap')}</span><span>${L(g, 'type')}</span></figcaption>
+      </figure>`).join('');
+  };
+  renderGallery();
 
-  const openItem = i => open(i);
-  // drag to scroll
+  // lightbox
+  const lb = $('#lightbox'), img = $('#lbImg'), cap = $('#lbCap');
+  let cur = 0;
+  const show = i => { cur = (i + GALLERY.length) % GALLERY.length; const g = GALLERY[cur]; img.src = `assets/img/work/${g.src}.jpg`; img.alt = `${L(g, 'cap')} ${T('js.by')}`; cap.textContent = `${L(g, 'cap')} — ${L(g, 'type')} · ${cur + 1}/${GALLERY.length}`; };
+  const open = i => { show(i); lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); document.body.classList.add('is-locked'); };
+  const close = () => { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); document.body.classList.remove('is-locked'); };
+
+  // drag to scroll (mouse); native scroll on touch
   let down = false, startX = 0, startL = 0, moved = false, downItem = null;
   gal.addEventListener('pointerdown', e => { down = true; moved = false; startX = e.clientX; startL = gal.scrollLeft; downItem = e.target.closest('.gitem'); if (e.pointerType === 'mouse') gal.setPointerCapture(e.pointerId); });
   gal.addEventListener('pointermove', e => { if (!down || e.pointerType !== 'mouse') return; const dx = e.clientX - startX; if (Math.abs(dx) > 4) { moved = true; gal.classList.add('is-dragging'); } gal.scrollLeft = startL - dx; });
-  const up = e => { if (!down) return; down = false; setTimeout(() => gal.classList.remove('is-dragging'), 50); if (!moved && downItem && e.type === 'pointerup') openItem(+downItem.dataset.i); downItem = null; };
+  const up = e => { if (!down) return; down = false; setTimeout(() => gal.classList.remove('is-dragging'), 50); if (!moved && downItem && e.type === 'pointerup') open(+downItem.dataset.i); downItem = null; };
   gal.addEventListener('pointerup', up); gal.addEventListener('pointercancel', up);
   gal.addEventListener('wheel', e => { if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { e.preventDefault(); gal.scrollLeft += e.deltaY; } }, { passive: false });
+  track.addEventListener('keydown', e => { if (e.key === 'Enter') { const f = e.target.closest('.gitem'); if (f) open(+f.dataset.i); } });
   const step = () => gal.clientWidth * 0.7;
   $('#galPrev').addEventListener('click', () => gal.scrollBy({ left: -step(), behavior: 'smooth' }));
   $('#galNext').addEventListener('click', () => gal.scrollBy({ left: step(), behavior: 'smooth' }));
@@ -299,13 +325,6 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
   };
   gal.addEventListener('scroll', prog, { passive: true }); addEventListener('resize', prog); prog();
 
-  // lightbox
-  const lb = $('#lightbox'), img = $('#lbImg'), cap = $('#lbCap');
-  let cur = 0;
-  const show = i => { cur = (i + GALLERY.length) % GALLERY.length; const g = GALLERY[cur]; img.src = `assets/img/work/${g.src}.jpg`; img.alt = `${g.cap} by Jordy Cutz`; cap.textContent = `${g.cap} — ${g.type} · ${cur + 1}/${GALLERY.length}`; };
-  const open = i => { show(i); lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); document.body.classList.add('is-locked'); };
-  const close = () => { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); document.body.classList.remove('is-locked'); };
-  track.addEventListener('keydown', e => { if (e.key === 'Enter') { const f = e.target.closest('.gitem'); if (f) open(+f.dataset.i); } });
   $('#lbClose').addEventListener('click', close);
   $('#lbPrev').addEventListener('click', () => show(cur - 1));
   $('#lbNext').addEventListener('click', () => show(cur + 1));
@@ -313,6 +332,8 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
   addEventListener('keydown', e => { if (!lb.classList.contains('is-open')) return; if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
   let tx = 0; lb.addEventListener('touchstart', e => tx = e.touches[0].clientX, { passive: true });
   lb.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
+
+  I.onChange(() => { renderGallery(); if (lb.classList.contains('is-open')) show(cur); });
 })();
 
 /* ---------- reviews marquee ---------- */
@@ -326,8 +347,10 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
 /* ---------- Booksy widget ---------- */
 (() => {
   const btn = $('#loadWidget'), body = $('#booksyWidget');
+  let loaded = false;
   const load = () => {
-    body.innerHTML = `<iframe title="Book with Jordy Cutz on Booksy" src="https://booksy.com/widget-2021/index.html?id=${BOOKSY_ID}&lang=en&country=us&mode=iframe" loading="lazy" allow="payment"></iframe>`;
+    loaded = true;
+    body.innerHTML = `<iframe title="Book with Jordy Cutz on Booksy" src="https://booksy.com/widget-2021/index.html?id=${BOOKSY_ID}&lang=${I.lang}&country=us&mode=iframe" loading="lazy" allow="payment"></iframe>`;
   };
   btn.addEventListener('click', load);
   // auto-load when the booking section is near the viewport (desktop only, to save mobile data)
@@ -335,6 +358,7 @@ const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matc
     const io = new IntersectionObserver(en => { if (en[0].isIntersecting) { load(); io.disconnect(); } }, { rootMargin: '400px' });
     io.observe(body);
   }
+  I.onChange(() => { if (loaded) load(); });
 })();
 
 /* ---------- misc ---------- */
