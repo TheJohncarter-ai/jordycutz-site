@@ -17,7 +17,7 @@
   --muted: #9b968c;
   --foil: linear-gradient(102deg, #a8875a 0%, #d8bd85 26%, #c9a961 46%, #efdcae 53%, #c9a961 62%, #d8bd85 80%, #a8875a 100%);
   --display: 'Bebas Neue', 'Oswald', Impact, sans-serif;
-  --serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --serif: 'Playfair', 'Playfair Display', Georgia, serif;
   --sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
@@ -642,3 +642,26 @@ h1, h2, h3, h4, p { margin: 0; }
 /* Section rhythm: the alternating grounds were 1.05:1 apart, so the device
    did nothing. A hairline does the work the tone could not. */
 .menu, .work, .faq { border-top: 1px solid var(--line); }
+
+
+/* ---------- typographic detail ---------- */
+/* Bebas Neue ships a single weight with no variable axes, so any bold on it
+   is browser-synthesised and smears the counters of a condensed cap face.
+   Turn synthesis off everywhere and let the real weights do the work. */
+* { font-synthesis: none; }
+
+/* Playfair carries an optical-size axis that Playfair Display does not.
+   Pin the accent italics to the display cut for finer hairlines. */
+.h2 em, .word--serif, .cta__title em, .feature__copy blockquote p, .rcard p {
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 1200;
+}
+
+/* Prices and durations sit in columns, so the digits should too. */
+.service__price, .service__time, .ticket__totals b, .ticket__line,
+.stat b, .reviews__score b { font-variant-numeric: tabular-nums lining-nums; }
+
+/* Headings read better broken at sense boundaries than at the raw line box.
+   `pretty` has no Firefox support yet and degrades to normal, which is fine. */
+.h2, .cta__title, .hero__title { text-wrap: balance; }
+.lede, .pillar p, .feature__copy > p, .faq__list details p { text-wrap: pretty; }
