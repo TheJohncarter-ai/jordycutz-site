@@ -3,6 +3,18 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://thejohncarter-ai.github.io/jordycutz-site/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://thejohncarter-ai.github.io/jordycutz-site/"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://thejohncarter-ai.github.io/jordycutz-site/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thejohncarter-ai.github.io/jordycutz-site/"/>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thejohncarter-ai.github.io/jordycutz-site/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://thejohncarter-ai.github.io/jordycutz-site/"/>
+    <xhtml:link rel="alternate" hreflang="es-US" href="https://thejohncarter-ai.github.io/jordycutz-site/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thejohncarter-ai.github.io/jordycutz-site/"/>
     <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>

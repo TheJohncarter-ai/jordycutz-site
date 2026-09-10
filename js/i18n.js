@@ -169,11 +169,21 @@ window.I18N_EN = {
   const captured = {}; // English HTML captured from the DOM on first run
   const listeners = [];
 
+  // NATIVE is the language this HTML file was published in. /es/index.html is
+  // pre-rendered in Spanish, so the strings captured from the DOM there are
+  // Spanish - which means we can only swap in place when a dictionary exists
+  // for the target language. Otherwise we follow the link for real.
+  const NATIVE = (document.documentElement.lang || 'en').slice(0, 2) === 'es' ? 'es' : 'en';
+  const pathLang = () => (/\/es\/?$/.test(location.pathname) ? 'es' : 'en');
   const detect = () => {
+    if (pathLang() === 'es') return 'es';               // an explicit /es/ URL wins
     try { const s = localStorage.getItem(KEY); if (s === 'en' || s === 'es') return s; } catch (_) {}
     const nav = (navigator.languages || [navigator.language || 'en']).map(l => l.toLowerCase());
-    return nav.some(l => l.startsWith('es')) ? 'es' : 'en'; // English unless the browser is set to Spanish
+    return nav.some(l => l.startsWith('es')) ? 'es' : 'en';
   };
+  // We can render `target` without a page load if it is this file's own
+  // language (restore the captured strings) or if we hold its dictionary.
+  const canRender = target => target === NATIVE || (target === 'es' && window.I18N_ES);
 
   let lang = detect();
 
@@ -191,13 +201,34 @@ window.I18N_EN = {
     const md = document.querySelector('meta[name="description"]'); if (md) md.content = t('js.desc');
     // Booksy links follow the language
     document.querySelectorAll('.js-booksy').forEach(a => { a.href = a.href.replace(/booksy\.com\/(en|es)-us\//, `booksy.com/${lang}-us/`); });
-    document.querySelectorAll('.lang__btn').forEach(b => { const on = b.dataset.lang === lang; b.classList.toggle('is-active', on); b.setAttribute('aria-pressed', on); });
+    document.querySelectorAll('.lang__btn').forEach(b => {
+      const on = b.dataset.lang === lang;
+      b.classList.toggle('is-active', on);
+      if (on) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+    });
     listeners.forEach(fn => fn(lang));
   };
 
   const set = l => { if (l !== 'en' && l !== 'es') return; lang = l; try { localStorage.setItem(KEY, l); } catch (_) {} apply(); };
 
-  document.addEventListener('click', e => { const b = e.target.closest('.lang__btn'); if (b) set(b.dataset.lang); });
+  // Swap in place for speed, but keep the address bar honest so the page is
+  // shareable and both languages have a real URL for search engines.
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.lang__btn');
+    if (!b) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;   // let new-tab work
+    const target = b.dataset.lang;
+    if (target === lang) { e.preventDefault(); return; }
+    if (!canRender(target)) return;            // let the browser navigate normally
+    e.preventDefault();
+    set(target);
+    try { history.pushState({ lang: target }, '', b.getAttribute('href')); } catch (_) { location.href = b.href; }
+  });
+  addEventListener('popstate', () => {
+    const target = pathLang();
+    if (target === lang) return;
+    if (canRender(target)) set(target); else location.reload();
+  });
 
   window.JC_I18N = { get lang() { return lang; }, t, set, apply, onChange: fn => listeners.push(fn) };
 

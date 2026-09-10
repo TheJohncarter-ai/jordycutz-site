@@ -601,3 +601,5 @@ h1, h2, h3, h4, p { margin: 0; }
 .ticket__line--house { font-weight: 700; }
 .ticket__line--info { color: rgba(10,10,11,0.6); font-size: 0.8rem; padding: 3px 0 3px 6px; }
 .ticket__hint { font-family: var(--sans); font-size: 0.68rem; color: rgba(10,10,11,0.55); margin-top: 8px; line-height: 1.4; }
+.lang__btn { text-decoration: none; cursor: pointer; }
+.lang__btn.is-active { color: var(--gold); }

@@ -17,6 +17,9 @@ Pure static HTML / CSS / JS — no build step, no framework. Hosted on GitHub Pa
 | `css/style.css` | Design system (obsidian + champagne gold, Bebas Neue / Playfair / Manrope) and all animations |
 | `js/main.js` | **Data lives here** (services, gallery, reviews — each with an `es` block) plus interactions |
 | `js/i18n.js` | **Spanish copy** for every static string, plus the EN/ES toggle runtime |
+| `es/index.html` | Generated Spanish page — run `build.py`, don't edit |
+| `build.py` | Generates `es/index.html` and `sitemap.xml` |
+| `robots.txt`, `sitemap.xml`, `404.html` | Search-engine plumbing |
 | `assets/img/work/` | Portfolio photos (from Jordy's Booksy profile), web-sized, with `-sm` thumbnails |
 | `assets/og.jpg` | Social share card |
 | `MARKET-RESEARCH.md` | Annapolis / DMV comparables and pricing recommendations |
@@ -33,7 +36,24 @@ If Jordy ever moves Booksy accounts, change `BOOKSY_ID` and `BOOKSY_URL` at the 
 
 ## Language toggle (EN / ES)
 
-The nav has an EN / ES switch (on mobile it sits between the logo and the menu button). English is the default, Spanish is picked automatically for browsers set to Spanish, and the visitor's choice is remembered. Switching also flips every Booksy link to `booksy.com/es-us/…` and reloads the booking widget in Spanish.
+Spanish is a **real page at `/es/`**, not just a client-side swap. That matters: search engines
+had no Spanish URL to rank before, so the Spanish copy was effectively invisible.
+
+- `index.html` is English, `es/index.html` is Spanish, and each declares `hreflang` pointing at the other.
+- The EN / ES control in the nav is a pair of real links, so both versions are crawlable and shareable.
+  Clicking still swaps instantly where it can and updates the address bar to match.
+- The URL wins: landing on `/es/` always gives Spanish. Otherwise a saved choice, then the browser language.
+- Switching also flips every Booksy link to `booksy.com/es-us/…` and loads the booking widget in Spanish.
+
+**`es/index.html` is generated — never edit it by hand.** Edit `index.html` (English) or
+`js/i18n.js` (Spanish), then run:
+
+```bash
+python build.py
+```
+
+That regenerates the Spanish page, refreshes both titles and `hreflang` blocks, and rewrites
+`sitemap.xml`. It reports any `data-i18n` key that has no Spanish string yet.
 
 - Static text: every translatable element has a `data-i18n="key"`; English is whatever is in `index.html`, Spanish is the matching key in `js/i18n.js` (`I18N_ES`).
 - Data-driven text (services, gallery captions, house-call row): the `es` fields in `js/main.js`.
