@@ -45,7 +45,7 @@ The nav (and the mobile menu) has an EN / ES switch. Spanish is picked automatic
 - **Photos:** drop a 1400px JPG and a 640px `-sm` JPG into `assets/img/work/` and add an entry to `GALLERY`.
 - **Reviews:** `REVIEWS` array. These are verbatim from Booksy — keep them real.
 - **Hours / address / service area:** search `index.html` for `Forest Drive`.
-- **House-call pricing:** currently "quoted per visit". See `MARKET-RESEARCH.md` for a recommended menu; add a `price` to the house-call row once Jordy sets it.
+- **House-call price:** `HOUSE_CALL_PRICE` at the top of `js/main.js` (flat $200 per visit; services checked with the toggle on are listed as info for Jordy, not priced). Update the matching copy in `index.html` (menu lede, FAQ) and `js/i18n.js` if the number changes.
 
 ## Run locally
 

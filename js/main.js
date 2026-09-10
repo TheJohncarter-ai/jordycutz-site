@@ -6,6 +6,7 @@
    ===================================================================== */
 
 const BOOKSY_ID = 1071238;
+const HOUSE_CALL_PRICE = 200; // flat price for a house call, any services, travel included
 const BOOKSY_URL = 'https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis';
 
 /* ---------- DATA ---------- */
@@ -232,33 +233,39 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
         </div>
         <div class="service__meta"><div class="service__price">$${s.price}</div><div class="service__time">${s.mins} ${T('js.min')}</div></div>
       </li>`).join('') + `
-      <li class="service service--house" data-cat="all">
+      <li class="service service--house${houseCall.checked ? ' is-selected' : ''}" data-cat="all" data-house="1" role="button" tabindex="0" aria-pressed="${houseCall.checked}">
+        <span class="service__check"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L19 7"/></svg></span>
         <div>
           <div class="service__name">${T('js.houseName')}<span class="service__tag">${T('js.houseTag')}</span></div>
           <div class="service__desc">${T('js.houseDesc')}</div>
         </div>
-        <div class="service__meta"><div class="service__price">${T('js.housePrice')}</div><div class="service__time">${T('js.houseTime')}</div></div>
+        <div class="service__meta"><div class="service__price">$${HOUSE_CALL_PRICE}</div><div class="service__time">${T('js.houseTime')}</div></div>
       </li>`;
   };
 
   const money = n => `$${n}`;
   const renderTicket = () => {
     const items = SERVICES.filter(s => selected.has(s.id));
-    if (!items.length) {
+    const house = houseCall.checked;
+    if (!items.length && !house) {
       lines.innerHTML = `<p class="ticket__empty">${I.lang === 'es' ? window.I18N_ES['ticket.empty'] : 'Nothing yet. Tap a service to begin.'}</p>`;
     } else {
-      lines.innerHTML = items.map(s => `<div class="ticket__line"><span>${L(s, 'name')}</span><small>${s.mins}m</small><span>${money(s.price)}</span></div>`).join('');
-      if (houseCall.checked) lines.innerHTML += `<div class="ticket__line"><span>${T('js.houseLine')}</span><small></small><span>${T('js.quoted')}</span></div>`;
+      lines.innerHTML = house ? `<div class="ticket__line ticket__line--house"><span>${T('js.houseLine')}</span><small></small><span>${money(HOUSE_CALL_PRICE)}</span></div>` : '';
+      lines.innerHTML += items.map(s => house
+        ? `<div class="ticket__line ticket__line--info"><span>↳ ${L(s, 'name')}</span><small>${s.mins}m</small><span>${T('js.included')}</span></div>`
+        : `<div class="ticket__line"><span>${L(s, 'name')}</span><small>${s.mins}m</small><span>${money(s.price)}</span></div>`).join('');
+      if (house && items.length) lines.innerHTML += `<p class="ticket__hint">${T('js.houseHint')}</p>`;
     }
-    const mins = items.reduce((a, s) => a + s.mins, 0), total = items.reduce((a, s) => a + s.price, 0);
+    const mins = items.reduce((a, s) => a + s.mins, 0), total = house ? HOUSE_CALL_PRICE : items.reduce((a, s) => a + s.price, 0);
     const h = Math.floor(mins / 60), m = mins % 60;
     tTime.textContent = mins ? (h ? `${h}h ${m ? m + 'm' : ''}`.trim() : `${m} ${T('js.min')}`) : `0 ${T('js.min')}`;
-    tTotal.textContent = houseCall.checked && items.length ? `${money(total)}+` : money(total);
+    tTotal.textContent = money(total);
     houseNote.textContent = houseCall.checked ? T('js.houseNoteHome') : T('js.houseNoteStudio');
     try { localStorage.setItem('jc_session', JSON.stringify({ ids: [...selected], house: houseCall.checked })); } catch (_) {}
   };
 
   const toggleRow = row => {
+    if (row.dataset.house) { houseCall.checked = !houseCall.checked; houseCall.dispatchEvent(new Event('change')); return; }
     const id = row.dataset.id; if (!id) return;
     selected.has(id) ? selected.delete(id) : selected.add(id);
     row.classList.toggle('is-selected', selected.has(id));
@@ -267,7 +274,7 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
   };
   list.addEventListener('click', e => { const row = e.target.closest('.service'); if (row) toggleRow(row); });
   list.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { const row = e.target.closest('.service'); if (row) { e.preventDefault(); toggleRow(row); } } });
-  houseCall.addEventListener('change', renderTicket);
+  houseCall.addEventListener('change', () => { const r = $('.service--house'); if (r) { r.classList.toggle('is-selected', houseCall.checked); r.setAttribute('aria-pressed', houseCall.checked); } renderTicket(); });
   $('#ticketClear').addEventListener('click', () => { selected.clear(); houseCall.checked = false; renderList(); renderTicket(); });
 
   // restore

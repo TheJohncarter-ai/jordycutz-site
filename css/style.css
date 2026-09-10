@@ -592,3 +592,8 @@ h1, h2, h3, h4, p { margin: 0; }
   .service.service--house { grid-template-columns: 1fr; gap: 12px; padding: 22px 18px; }
   .service.service--house .service__meta { text-align: left; }
 }
+
+/* ---------- house-call ticket lines ---------- */
+.ticket__line--house { font-weight: 700; }
+.ticket__line--info { color: rgba(10,10,11,0.6); font-size: 0.8rem; padding: 3px 0 3px 6px; }
+.ticket__hint { font-family: var(--sans); font-size: 0.68rem; color: rgba(10,10,11,0.55); margin-top: 8px; line-height: 1.4; }
