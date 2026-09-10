@@ -51,6 +51,10 @@ def hreflang(canonical):
 
 
 def set_head(doc, title, desc, canonical, og_locale, og_alt, og_url):
+    # Idempotent: drop any hreflang block a previous run left behind before
+    # re-emitting it, otherwise repeated builds stack duplicates.
+    doc = ''.join(line for line in doc.splitlines(keepends=True)
+                  if 'rel="alternate" hreflang=' not in line)
     doc = re.sub(r'<title>.*?</title>', f'<title>{title}</title>', doc, count=1, flags=re.S)
     doc = re.sub(r'(<meta name="description" content=")[^"]*(">)',
                  lambda m: m.group(1) + desc + m.group(2), doc, count=1)
