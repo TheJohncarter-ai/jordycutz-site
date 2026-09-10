@@ -23,7 +23,6 @@ window.I18N_ES = {
   'hero.stat1': 'Calificación Booksy',
   'hero.stat2': 'Reseñas de 5 estrellas',
   'hero.stat3': 'Días a la semana',
-  'hero.stamp': 'JORDY CUTZ · ANNAPOLIS · BARBERO DE LUJO A DOMICILIO · MARYLAND · ',
 
   'mq.1': 'Fades', 'mq.2': 'Tapers', 'mq.3': 'Barba esculpida', 'mq.4': 'Toalla caliente',
   'mq.5': 'Diseños', 'mq.6': 'Niños', 'mq.7': 'A domicilio', 'mq.8': 'We speak English',

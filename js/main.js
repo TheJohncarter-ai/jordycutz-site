@@ -80,13 +80,13 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
   const pre = $('#preloader');
   const done = () => { pre.classList.add('is-done'); document.body.classList.remove('is-locked'); };
   document.body.classList.add('is-locked');
-  const minWait = reduceMotion ? 0 : 1400;
+  const minWait = reduceMotion ? 0 : 550;
   const start = performance.now();
   window.addEventListener('load', () => {
     const wait = Math.max(0, minWait - (performance.now() - start));
     setTimeout(done, wait);
   });
-  setTimeout(done, 3500); // hard cap
+  setTimeout(done, 2200); // hard cap
 })();
 
 /* ---------- cursor ---------- */
@@ -285,8 +285,8 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
 
   // filters
   $$('.chip').forEach(chip => chip.addEventListener('click', () => {
-    $$('.chip').forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-selected', 'false'); });
-    chip.classList.add('is-active'); chip.setAttribute('aria-selected', 'true');
+    $$('.chip').forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
+    chip.classList.add('is-active'); chip.setAttribute('aria-pressed', 'true');
     filter = chip.dataset.filter;
     $$('.service').forEach(r => r.classList.toggle('is-hidden', !(filter === 'all' || r.dataset.cat === filter || r.dataset.cat === 'all')));
   }));

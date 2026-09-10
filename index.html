@@ -27,6 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/work/fade-moody.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -457,6 +458,8 @@
   <!-- ===== GRAIN ===== -->
   <div class="grain" aria-hidden="true"></div>
 
+  <a class="skip" href="#menu">Skip to services</a>
+
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
     <a href="#top" class="nav__brand" data-cursor="link" aria-label="Jordy Cutz home">
@@ -512,7 +515,10 @@
     <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
       <div class="hero__media" data-parallax="0.04">
-        <img src="assets/img/work/fade-moody.jpg" alt="Client with a fresh skin fade and sunglasses in the Jordy Cutz chair" width="1024" height="1024" fetchpriority="high" decoding="async">
+        <picture>
+          <source srcset="assets/img/work/fade-moody.webp" type="image/webp">
+          <img src="assets/img/work/fade-moody.jpg" alt="Client with a fresh skin fade and sunglasses in the Jordy Cutz chair" width="1024" height="1024" fetchpriority="high" decoding="async">
+        </picture>
       </div>
       <div class="hero__veil"></div>
       <div class="hero__glow" data-parallax="-0.03"></div>
@@ -551,13 +557,6 @@
       </div>
 
       <a href="#experience" class="hero__scroll" aria-label="Scroll down"><span></span></a>
-      <div class="hero__stamp" aria-hidden="true">
-        <svg viewBox="0 0 200 200">
-          <defs><path id="circlePath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
-          <text><textPath href="#circlePath" data-i18n="hero.stamp">JORDY CUTZ · ANNAPOLIS · LUXURY MOBILE BARBER · EST. MARYLAND · </textPath></text>
-        </svg>
-        <div class="hero__stamp-center">JC</div>
-      </div>
     </section>
 
     <!-- ===== MARQUEE ===== -->
@@ -622,12 +621,12 @@
           <p class="lede" data-i18n="menu.lede">Tap services to add them. Studio prices shown, straight from Booksy. House calls are one flat $200 per visit, any services, travel included.</p>
         </div>
 
-        <div class="menu__filters reveal" role="tablist" aria-label="Filter services">
-          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true" data-i18n="menu.f.all">All</button>
-          <button class="chip" data-filter="cuts" role="tab" data-i18n="menu.f.cuts">Cuts</button>
-          <button class="chip" data-filter="beard" role="tab" data-i18n="menu.f.beard">Beard</button>
-          <button class="chip" data-filter="design" role="tab" data-i18n="menu.f.design">Designs</button>
-          <button class="chip" data-filter="kids" role="tab" data-i18n="menu.f.kids">Kids</button>
+        <div class="menu__filters reveal" role="group" aria-label="Filter services">
+          <button class="chip is-active" data-filter="all" aria-pressed="true" data-i18n="menu.f.all">All</button>
+          <button class="chip" data-filter="cuts" aria-pressed="false" data-i18n="menu.f.cuts">Cuts</button>
+          <button class="chip" data-filter="beard" aria-pressed="false" data-i18n="menu.f.beard">Beard</button>
+          <button class="chip" data-filter="design" aria-pressed="false" data-i18n="menu.f.design">Designs</button>
+          <button class="chip" data-filter="kids" aria-pressed="false" data-i18n="menu.f.kids">Kids</button>
         </div>
 
         <div class="menu__grid">
@@ -650,7 +649,7 @@
               </label>
               <small id="houseNote">At the studio · 1407 Forest Dr.</small>
             </div>
-            <div class="ticket__totals">
+            <div class="ticket__totals" role="status" aria-atomic="true">
               <div><small data-i18n="ticket.time">Time</small><b id="ticketTime">0 min</b></div>
               <div><small data-i18n="ticket.total">Total</small><b id="ticketTotal">$0</b></div>
             </div>

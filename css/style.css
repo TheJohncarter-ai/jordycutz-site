@@ -4,25 +4,25 @@
    ===================================================================== */
 
 :root {
-  --ink: #0a0a0b;
-  --ink-2: #111113;
-  --ink-3: #18181c;
-  --ink-4: #232329;
+  --ink: #0b0a09;
+  --ink-2: #131110;
+  --ink-3: #1c1917;
+  --ink-4: #262220;
   --line: rgba(233, 214, 166, 0.14);
-  --line-strong: rgba(233, 214, 166, 0.32);
+  --line-strong: rgba(233, 214, 166, 0.46);
   --gold: #c9a961;
   --gold-2: #e9d6a6;
   --gold-3: #8a6d2f;
   --cream: #f3ede2;
   --muted: #9b968c;
-  --foil: linear-gradient(100deg, #8a6d2f 0%, #e9d6a6 30%, #c9a961 48%, #fff4d2 62%, #c9a961 78%, #8a6d2f 100%);
+  --foil: linear-gradient(102deg, #a8875a 0%, #d8bd85 26%, #c9a961 46%, #efdcae 53%, #c9a961 62%, #d8bd85 80%, #a8875a 100%);
   --display: 'Bebas Neue', 'Oswald', Impact, sans-serif;
   --serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --sans: 'Manrope', 'Inter', system-ui, -apple-system, sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
   --nav-h: 76px;
-  --radius: 18px;
+  --radius: 10px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -59,7 +59,7 @@ h1, h2, h3, h4, p { margin: 0; }
   font-family: var(--display);
   font-weight: 400;
   font-size: clamp(3rem, 7vw, 5.6rem);
-  line-height: 0.92;
+  line-height: 1.0;
   letter-spacing: 0.01em;
   text-transform: uppercase;
 }
@@ -118,7 +118,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .preloader__word { font-family: var(--display); font-size: 1.6rem; letter-spacing: 0.35em; color: var(--cream); }
 .preloader__word span { color: var(--gold); }
 .preloader__bar { width: 160px; height: 1px; background: var(--line); overflow: hidden; }
-.preloader__bar span { display: block; height: 100%; width: 0; background: var(--gold); animation: bar 1.1s 0.1s var(--ease-io) forwards; }
+.preloader__bar span { display: block; height: 100%; width: 0; background: var(--gold); animation: bar 0.6s 0.05s var(--ease-io) forwards; }
 @keyframes bar { to { width: 100%; } }
 
 /* ---------- cursor ---------- */
@@ -147,13 +147,13 @@ h1, h2, h3, h4, p { margin: 0; }
 .btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.35s var(--ease); }
 .btn:hover svg { transform: translateX(4px); }
 .btn > span { position: relative; z-index: 1; }
-.btn--gold { background: var(--gold); color: var(--ink); box-shadow: 0 10px 30px -12px rgba(201,169,97,0.6); }
+.btn--gold { background: var(--gold); color: var(--ink); box-shadow: 0 10px 28px -14px rgba(0,0,0,0.75); }
 .btn--gold::before {
   content: ""; position: absolute; inset: 0; background: var(--gold-2);
   transform: translateY(101%); transition: transform 0.45s var(--ease); z-index: 0; border-radius: inherit;
 }
 .btn--gold:hover::before { transform: translateY(0); }
-.btn--gold:hover { box-shadow: 0 18px 40px -14px rgba(233,214,166,0.7); }
+.btn--gold:hover { box-shadow: 0 16px 34px -16px rgba(0,0,0,0.8); }
 .btn--ghost { border-color: var(--line-strong); color: var(--cream); backdrop-filter: blur(8px); }
 .btn--ghost::before { content: ""; position: absolute; inset: 0; background: var(--cream); transform: scaleX(0); transform-origin: left; transition: transform 0.45s var(--ease); z-index: 0; border-radius: inherit; }
 .btn--ghost:hover { color: var(--ink); border-color: var(--cream); }
@@ -229,7 +229,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .pill__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 0 rgba(201,169,97,0.6); animation: pulse 2s infinite; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(201,169,97,0); } 100% { box-shadow: 0 0 0 0 rgba(201,169,97,0); } }
 .hero__title { font-family: var(--display); font-weight: 400; font-size: clamp(4.4rem, 9.6vw, 9.2rem); line-height: 0.86; letter-spacing: 0.01em; margin: 0 0 28px -0.03em; }
-.hero__title .line { display: block; overflow: hidden; padding-bottom: 0.06em; }
+.hero__title .line { display: block; overflow: hidden; padding-bottom: 0.14em; }
 .hero__title .word { display: inline-block; transform: translateY(110%); animation: rise 1.1s var(--ease) forwards; }
 .hero__title .line:nth-child(1) .word { animation-delay: 0.1s; } .hero__title .line:nth-child(1) .word:nth-child(2) { animation-delay: 0.18s; }
 .hero__title .line:nth-child(2) .word { animation-delay: 0.26s; } .hero__title .line:nth-child(2) .word:nth-child(2) { animation-delay: 0.34s; }
@@ -489,7 +489,7 @@ h1, h2, h3, h4, p { margin: 0; }
 .footer__bottom a { color: var(--gold); }
 
 /* ---------- fab ---------- */
-.fab { position: fixed; right: 18px; bottom: 18px; z-index: 900; padding: 16px 26px; border-radius: 999px; background: var(--gold); color: var(--ink); font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.2em; box-shadow: 0 20px 40px -12px rgba(201,169,97,0.7); transform: translateY(120px); transition: transform 0.5s var(--ease); display: none; }
+.fab { position: fixed; right: 18px; bottom: 18px; z-index: 900; padding: 16px 26px; border-radius: 999px; background: var(--gold); color: var(--ink); font-family: var(--display); font-size: 1.1rem; letter-spacing: 0.2em; box-shadow: 0 14px 30px -12px rgba(0,0,0,0.8); transform: translateY(120px); transition: transform 0.5s var(--ease); display: none; }
 .fab.is-visible { transform: none; }
 @media (max-width: 980px) { .fab { display: block; } }
 
@@ -603,3 +603,42 @@ h1, h2, h3, h4, p { margin: 0; }
 .ticket__hint { font-family: var(--sans); font-size: 0.68rem; color: rgba(10,10,11,0.55); margin-top: 8px; line-height: 1.4; }
 .lang__btn { text-decoration: none; cursor: pointer; }
 .lang__btn.is-active { color: var(--gold); }
+
+
+/* ---------- focus, skip link, live regions ---------- */
+/* There were no focus styles at all before this: 47KB of CSS with zero
+   outline declarations, relying on the browser default over pill buttons
+   that clip their own outline. */
+:focus-visible {
+  outline: 2px solid var(--gold-2);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* A light ring is invisible on a gold fill, so invert it there. */
+.btn--gold:focus-visible, .fab:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px var(--gold-2);
+}
+@supports not selector(:focus-visible) {
+  a:focus, button:focus, summary:focus, [tabindex]:focus {
+    outline: 2px solid var(--gold-2); outline-offset: 3px;
+  }
+}
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 10001;
+  padding: 12px 20px; border-radius: 6px;
+  background: var(--gold); color: var(--ink);
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  transition: top 0.25s var(--ease);
+}
+.skip:focus { top: 12px; }
+
+/* Marquees auto-scroll indefinitely (WCAG 2.2.2). Hover-pause only helped
+   mouse users, so pause on keyboard focus too. */
+.marquee:focus-within .marquee__track,
+.rmarquee:focus-within .rmarquee__row { animation-play-state: paused; }
+
+/* Section rhythm: the alternating grounds were 1.05:1 apart, so the device
+   did nothing. A hairline does the work the tone could not. */
+.menu, .work, .faq { border-top: 1px solid var(--line); }
