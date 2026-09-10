@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jordy Cutz — Luxury Mobile Barber · Annapolis, MD</title>
+  <meta name="description" content="Jordy Cutz is a 5.0-rated, Booksy-recommended luxury barber in Annapolis, Maryland. Precision fades, sculpted beards, custom designs and hot-towel rituals — in the studio or delivered to your door. Book instantly on Booksy.">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="canonical" href="https://thejohncarter-ai.github.io/jordycutz-site/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jordy Cutz — Luxury Mobile Barber · Annapolis">
+  <meta property="og:description" content="Precision fades, sculpted beards, custom designs. 5.0 stars on Booksy. The cut comes to you.">
+  <meta property="og:image" content="https://thejohncarter-ai.github.io/jordycutz-site/assets/og.jpg">
+  <meta property="og:url" content="https://thejohncarter-ai.github.io/jordycutz-site/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Jordy Cutz (J.Barber 1)",
+    "image": "https://thejohncarter-ai.github.io/jordycutz-site/assets/og.jpg",
+    "url": "https://thejohncarter-ai.github.io/jordycutz-site/",
+    "priceRange": "$10 - $50",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1407 Forest Drive, Suite 1",
+      "addressLocality": "Annapolis",
+      "addressRegion": "MD",
+      "postalCode": "21401",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    }],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "40" },
+    "sameAs": [
+      "https://www.instagram.com/jordycutzb",
+      "https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      <svg viewBox="0 0 120 120" class="monogram" aria-hidden="true">
+        <circle cx="60" cy="60" r="54" class="monogram__ring"/>
+        <path class="monogram__letter" d="M44 34v36c0 9-5 14-13 14-6 0-10-3-12-8"/>
+        <path class="monogram__letter" d="M92 44c-3-6-9-10-16-10-11 0-19 10-19 25s8 25 19 25c7 0 13-4 16-10"/>
+      </svg>
+      <div class="preloader__word">JORDY <span>CUTZ</span></div>
+      <div class="preloader__bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor is-hidden" id="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"></div></div>
+
+  <!-- ===== GRAIN ===== -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" data-cursor="link" aria-label="Jordy Cutz home">
+      <svg viewBox="0 0 120 120" class="nav__mono" aria-hidden="true">
+        <circle cx="60" cy="60" r="54"/>
+        <path d="M44 34v36c0 9-5 14-13 14-6 0-10-3-12-8"/>
+        <path d="M92 44c-3-6-9-10-16-10-11 0-19 10-19 25s8 25 19 25c7 0 13-4 16-10"/>
+      </svg>
+      <span class="nav__word">JORDY <em>CUTZ</em></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#experience" data-cursor="link">Experience</a>
+      <a href="#menu" data-cursor="link">Menu</a>
+      <a href="#work" data-cursor="link">The Work</a>
+      <a href="#reviews" data-cursor="link">Reviews</a>
+      <a href="#studio" data-cursor="link">Studio</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="https://www.instagram.com/jordycutzb" target="_blank" rel="noopener" class="nav__ig" aria-label="Instagram" data-cursor="link">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener" class="btn btn--gold btn--sm magnetic" data-cursor="book">
+        <span>Book Now</span>
+      </a>
+      <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mmenu" id="mobileMenu" aria-hidden="true">
+    <div class="mmenu__bg"></div>
+    <nav class="mmenu__links" aria-label="Mobile">
+      <a href="#experience"><small>01</small>Experience</a>
+      <a href="#menu"><small>02</small>Menu</a>
+      <a href="#work"><small>03</small>The Work</a>
+      <a href="#reviews"><small>04</small>Reviews</a>
+      <a href="#studio"><small>05</small>Studio</a>
+      <a href="#book" class="mmenu__book"><small>06</small>Book</a>
+    </nav>
+    <div class="mmenu__foot">
+      <a href="https://www.instagram.com/jordycutzb" target="_blank" rel="noopener">@jordycutzb</a>
+      <span>Annapolis, MD · Hablamos español</span>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__media" data-parallax="0.04">
+        <img src="assets/img/work/fade-moody.jpg" alt="Client with a fresh skin fade in the Jordy Cutz chair" fetchpriority="high">
+      </div>
+      <div class="hero__veil"></div>
+      <div class="hero__glow" data-parallax="-0.03"></div>
+
+      <div class="hero__inner">
+        <div class="hero__eyebrow reveal">
+          <span class="pill pill--gold"><i class="pill__dot"></i>Booksy Recommended</span>
+          <span class="pill">Annapolis, MD</span>
+          <span class="pill">Studio &amp; House Calls</span>
+        </div>
+
+        <h1 class="hero__title" aria-label="The cut comes to you.">
+          <span class="line"><span class="word">THE</span> <span class="word">CUT</span></span>
+          <span class="line"><span class="word word--serif">comes</span> <span class="word">TO</span></span>
+          <span class="line"><span class="word word--foil">YOU.</span></span>
+        </h1>
+
+        <p class="hero__sub reveal">
+          Precision fades. Sculpted beards. Custom designs. A hot-towel ritual you'll actually look forward to.
+          Five stars, forty times over — in the studio or delivered to your door.
+        </p>
+
+        <div class="hero__actions reveal">
+          <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener" class="btn btn--gold magnetic" data-cursor="book">
+            <span>Book on Booksy</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#menu" class="btn btn--ghost magnetic" data-cursor="link"><span>See the Menu</span></a>
+        </div>
+
+        <div class="hero__stats reveal">
+          <div class="stat"><b><span data-count="5" data-decimals="1">0.0</span></b><small>Booksy rating</small></div>
+          <div class="stat"><b><span data-count="40">0</span></b><small>Five-star reviews</small></div>
+          <div class="stat"><b><span data-count="7">0</span><em>/7</em></b><small>Days a week</small></div>
+        </div>
+      </div>
+
+      <a href="#experience" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+      <div class="hero__stamp" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circlePath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <text><textPath href="#circlePath">JORDY CUTZ · ANNAPOLIS · LUXURY MOBILE BARBER · EST. MARYLAND · </textPath></text>
+        </svg>
+        <div class="hero__stamp-center">JC</div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Fades</span><i>◆</i><span>Tapers</span><i>◆</i><span>Beard Sculpting</span><i>◆</i><span>Hot Towel Steam</span><i>◆</i><span>Custom Designs</span><i>◆</i><span>Kids</span><i>◆</i><span>House Calls</span><i>◆</i><span>Hablamos Español</span><i>◆</i>
+        <span>Fades</span><i>◆</i><span>Tapers</span><i>◆</i><span>Beard Sculpting</span><i>◆</i><span>Hot Towel Steam</span><i>◆</i><span>Custom Designs</span><i>◆</i><span>Kids</span><i>◆</i><span>House Calls</span><i>◆</i><span>Hablamos Español</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">01 — The Experience</span>
+          <h2 class="h2">Not a haircut.<br><em>A standard.</em></h2>
+          <p class="lede">Most barbers give you a chair. Jordy gives you a ritual — built around your face, your hair, and your schedule.</p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar tilt reveal" data-cursor="link">
+            <div class="pillar__num">01</div>
+            <div class="pillar__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 32h30l6-10H14L6 32z"/><circle cx="14" cy="36" r="4"/><circle cx="32" cy="36" r="4"/><path d="M14 22V14h12"/></svg>
+            </div>
+            <h3>We come to you.</h3>
+            <p>Home, office, hotel, wedding suite, game day. A full studio setup arrives at your door — chair, cape, tools, and the same hot-towel ritual. Zero commute, zero waiting room.</p>
+            <span class="pillar__foot">Annapolis &amp; Anne Arundel · DMV on request</span>
+          </article>
+
+          <article class="pillar tilt reveal" data-cursor="link">
+            <div class="pillar__num">02</div>
+            <div class="pillar__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="14" cy="34" r="6"/><circle cx="14" cy="14" r="6"/><path d="M19 18l22 20M19 30l22-20"/></svg>
+            </div>
+            <h3>Precision, every time.</h3>
+            <p>Low, mid, high — skin, drop, burst. Blends with no lines. Beards profiled to the bone structure. Clients call it consistent because it is: same result, every visit, for years.</p>
+            <span class="pillar__foot">"He never misses." — Peach, 5★</span>
+          </article>
+
+          <article class="pillar tilt reveal" data-cursor="link">
+            <div class="pillar__num">03</div>
+            <div class="pillar__icon">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 30c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M8 38c4-4 8-4 12 0s8 4 12 0 8-4 12 0"/><path d="M16 22c0-4 4-6 4-10M24 22c0-4 4-6 4-10M32 22c0-4 4-6 4-10"/></svg>
+            </div>
+            <h3>The hot-towel ritual.</h3>
+            <p>Steam, hot towel, massage, razor-clean edges. It's the part clients don't expect and won't give up. Included with the signature Haircut &amp; Beard and Beard Maintenance services.</p>
+            <span class="pillar__foot">Signature · 45 min</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <div>
+            <span class="kicker">02 — The Menu</span>
+            <h2 class="h2">Build your <em>session.</em></h2>
+          </div>
+          <p class="lede">Tap services to add them. Studio prices shown, straight from Booksy. House calls are quoted per visit with travel included.</p>
+        </div>
+
+        <div class="menu__filters reveal" role="tablist" aria-label="Filter services">
+          <button class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="chip" data-filter="cuts" role="tab">Cuts</button>
+          <button class="chip" data-filter="beard" role="tab">Beard</button>
+          <button class="chip" data-filter="design" role="tab">Designs</button>
+          <button class="chip" data-filter="kids" role="tab">Kids</button>
+        </div>
+
+        <div class="menu__grid">
+          <ul class="services" id="services" aria-label="Services"></ul>
+
+          <aside class="ticket reveal" id="ticket">
+            <div class="ticket__head">
+              <span class="ticket__brand">JC</span>
+              <span>Your Session</span>
+              <span class="ticket__no">№ <b id="ticketNo">0001</b></span>
+            </div>
+            <div class="ticket__lines" id="ticketLines">
+              <p class="ticket__empty">Nothing yet. Tap a service to begin.</p>
+            </div>
+            <div class="ticket__toggle">
+              <label class="switch">
+                <input type="checkbox" id="houseCall">
+                <span class="switch__track"><span class="switch__thumb"></span></span>
+                <span class="switch__label">House call</span>
+              </label>
+              <small id="houseNote">At the studio · 1407 Forest Dr.</small>
+            </div>
+            <div class="ticket__totals">
+              <div><small>Time</small><b id="ticketTime">0 min</b></div>
+              <div><small>Total</small><b id="ticketTotal">$0</b></div>
+            </div>
+            <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener" class="btn btn--gold btn--block magnetic" id="ticketBook" data-cursor="book">
+              <span>Book this on Booksy</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <button class="ticket__clear" id="ticketClear" type="button">Clear</button>
+            <p class="ticket__fine">Select the same services on Booksy to confirm your time. Prices may vary slightly by promotion.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SIGNATURE / FEATURE ===== -->
+    <section class="section feature" id="signature">
+      <div class="container feature__grid">
+        <div class="feature__media reveal">
+          <div class="feature__img tilt" data-cursor="drag">
+            <img src="assets/img/work/hot-towel.jpg" alt="Hot towel steam treatment during a beard service" loading="lazy">
+            <div class="feature__badge"><span>Signature</span><b>Hot Towel<br>Ritual</b></div>
+          </div>
+          <div class="feature__img feature__img--sm">
+            <img src="assets/img/work/jordy-at-work.jpg" alt="Jordy detailing a fade with clippers" loading="lazy">
+          </div>
+        </div>
+        <div class="feature__copy">
+          <span class="kicker reveal">The Barber</span>
+          <h2 class="h2 reveal">Jordy.<br><em>Craft with attitude.</em></h2>
+          <p class="reveal">Passionate about clean cuts, sharp beards and style with attitude. Jordy built a 5.0 rating one client at a time from a Forest Drive studio in Annapolis — and now brings the full experience to wherever you are.</p>
+          <blockquote class="reveal">
+            <p>"Transformando looks. Nuevo look, nueva vibra."</p>
+            <cite>— Jordy, @jordycutzb</cite>
+          </blockquote>
+          <ul class="feature__list reveal">
+            <li><b>Bilingual</b><span>English &amp; Español</span></li>
+            <li><b>Open daily</b><span>8 AM – 7 PM, seven days</span></li>
+            <li><b>Booksy verified</b><span>Recommended · Promoted Entrepreneur</span></li>
+          </ul>
+          <a href="https://www.instagram.com/jordycutzb" target="_blank" rel="noopener" class="btn btn--ghost magnetic reveal" data-cursor="link"><span>Follow the work on Instagram</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WORK / GALLERY ===== -->
+    <section class="section work" id="work">
+      <div class="container">
+        <div class="section__head section__head--split reveal">
+          <div>
+            <span class="kicker">03 — The Work</span>
+            <h2 class="h2">Receipts.<br><em>Not promises.</em></h2>
+          </div>
+          <p class="lede">Real clients, real chairs. Drag to browse, tap to enlarge.</p>
+        </div>
+      </div>
+      <div class="gallery" id="gallery" data-cursor="drag">
+        <div class="gallery__track" id="galleryTrack"></div>
+      </div>
+      <div class="container gallery__nav reveal">
+        <button class="round" id="galPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <div class="gallery__progress"><span id="galBar"></span></div>
+        <button class="round" id="galNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="reviews__head reveal">
+          <div class="reviews__score">
+            <b>5.0</b>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <small>40 verified Booksy reviews</small>
+          </div>
+          <div>
+            <span class="kicker">04 — Reviews</span>
+            <h2 class="h2">The word <em>on the street.</em></h2>
+          </div>
+        </div>
+      </div>
+      <div class="rmarquee" aria-label="Client reviews">
+        <div class="rmarquee__row" id="reviewsRowA"></div>
+        <div class="rmarquee__row rmarquee__row--rev" id="reviewsRowB"></div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section class="section book" id="book">
+      <div class="container book__grid">
+        <div class="book__copy">
+          <span class="kicker reveal">05 — Reserve</span>
+          <h2 class="h2 reveal">Lock in <em>your chair.</em></h2>
+          <p class="lede reveal">Booking runs through Booksy — pick a service, pick a time, done. Confirmations and reminders are automatic.</p>
+          <ol class="steps reveal">
+            <li><b>01</b><div><strong>Choose a service</strong><span>Fade, taper, beard, design — or build a session above.</span></div></li>
+            <li><b>02</b><div><strong>Pick your slot</strong><span>Open every day, 8 AM to 7 PM. Same-day often available.</span></div></li>
+            <li><b>03</b><div><strong>Studio or house call</strong><span>Coming to you? Leave the address in the booking note.</span></div></li>
+          </ol>
+          <div class="book__btns reveal">
+            <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener" class="btn btn--gold magnetic" data-cursor="book"><span>Open Booksy</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://www.instagram.com/jordycutzb" target="_blank" rel="noopener" class="btn btn--ghost magnetic" data-cursor="link"><span>DM on Instagram</span></a>
+          </div>
+        </div>
+        <div class="book__widget reveal">
+          <div class="widget-frame">
+            <div class="widget-frame__bar"><i></i><i></i><i></i><span>booksy.com · J.Barber 1</span></div>
+            <div class="widget-frame__body" id="booksyWidget">
+              <button class="widget-load" id="loadWidget" type="button" data-cursor="book">
+                <span class="widget-load__logo">b</span>
+                <b>Load live booking calendar</b>
+                <small>Loads Booksy's secure widget right here</small>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STUDIO / LOCATION ===== -->
+    <section class="section studio" id="studio">
+      <div class="container studio__grid">
+        <div class="studio__info">
+          <span class="kicker reveal">06 — The Studio</span>
+          <h2 class="h2 reveal">Forest Drive.<br><em>Or your driveway.</em></h2>
+          <dl class="studio__dl reveal">
+            <div><dt>Address</dt><dd>1407 Forest Drive, Suite 1<br>Annapolis, MD 21401</dd></div>
+            <div><dt>Hours</dt><dd>Monday – Sunday<br>8:00 AM – 7:00 PM</dd></div>
+            <div><dt>House calls</dt><dd>Annapolis · Anne Arundel County<br>DC / Baltimore corridor by request</dd></div>
+            <div><dt>Connect</dt><dd><a href="https://www.instagram.com/jordycutzb" target="_blank" rel="noopener">@jordycutzb</a><br><a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener">Booksy profile</a></dd></div>
+          </dl>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=1407+Forest+Drive+Suite+1+Annapolis+MD+21401" target="_blank" rel="noopener" class="btn btn--ghost magnetic reveal" data-cursor="link"><span>Get directions</span></a>
+        </div>
+        <div class="studio__map reveal">
+          <iframe title="Map to Jordy Cutz, 1407 Forest Drive, Annapolis" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+            src="https://www.google.com/maps?q=1407+Forest+Drive+Suite+1+Annapolis+MD+21401&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq">
+      <div class="container faq__grid">
+        <div class="reveal">
+          <span class="kicker">07 — Questions</span>
+          <h2 class="h2">Good to <em>know.</em></h2>
+        </div>
+        <div class="faq__list reveal">
+          <details>
+            <summary>How do house calls work?<i></i></summary>
+            <p>Book your service on Booksy and add your address in the note, or DM on Instagram to arrange. Jordy arrives with a full setup — chair, cape, tools, hot towels. House-call pricing is quoted per visit with travel included; group and event bookings welcome.</p>
+          </details>
+          <details>
+            <summary>What's included with the Haircut &amp; Beard?<i></i></summary>
+            <p>A full fade or taper, beard alignment and profiling, hot-towel steam and massage, and a razor-clean finish. It's the signature service and runs about 45 minutes.</p>
+          </details>
+          <details>
+            <summary>Do you cut kids?<i></i></summary>
+            <p>Yes — regular cuts and fades for kids, 30 minutes, with plenty of patience. Designs are available for kids too.</p>
+          </details>
+          <details>
+            <summary>Can I get a custom design?<i></i></summary>
+            <p>Absolutely. Lines, arrows, logos, lettering — bring a reference or describe the idea. Design + fade runs about 55 minutes.</p>
+          </details>
+          <details>
+            <summary>¿Hablas español?<i></i></summary>
+            <p>Sí. Jordy atiende en inglés y español. Reserva por Booksy o escribe por Instagram.</p>
+          </details>
+          <details>
+            <summary>Cancellations?<i></i></summary>
+            <p>Life happens — just reschedule through Booksy as early as you can so the slot can go to someone else. Booksy's payment and cancellation policy applies.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FINAL CTA ===== -->
+    <section class="cta">
+      <div class="cta__bg" aria-hidden="true"><span>JORDY CUTZ</span></div>
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title">Fresh cut.<br><em>New vibe.</em></h2>
+        <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener" class="btn btn--gold btn--xl magnetic" data-cursor="book"><span>Book on Booksy</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="nav__word">JORDY <em>CUTZ</em></span>
+        <p>Luxury barbering, delivered. Annapolis, Maryland.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Explore</h4>
+        <a href="#experience">Experience</a><a href="#menu">Menu</a><a href="#work">The Work</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/jordycutzb" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener">Booksy</a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=1407+Forest+Drive+Suite+1+Annapolis+MD+21401" target="_blank" rel="noopener">Directions</a>
+      </div>
+      <div class="footer__col">
+        <h4>Studio</h4>
+        <span>1407 Forest Drive, Suite 1<br>Annapolis, MD 21401</span>
+        <span>Daily · 8 AM – 7 PM</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Jordy Cutz · J.Barber 1. All rights reserved.</span>
+      <span>Hablamos español · <a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING BOOK (mobile) ===== -->
+  <a href="https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis" target="_blank" rel="noopener" class="fab" id="fab" aria-label="Book on Booksy">
+    <span>Book</span>
+  </a>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lightbox__arrow lightbox__arrow--l" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <figure class="lightbox__fig">
+      <img id="lbImg" src="" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lightbox__arrow lightbox__arrow--r" id="lbNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
