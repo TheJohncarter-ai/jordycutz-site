@@ -1,0 +1,5 @@
+# Jordy Cutz — Luxury Mobile Barber, Annapolis MD
+User-agent: *
+Allow: /
+
+Sitemap: https://thejohncarter-ai.github.io/jordycutz-site/sitemap.xml

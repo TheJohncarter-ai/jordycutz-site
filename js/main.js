@@ -301,7 +301,10 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
   const renderGallery = () => {
     track.innerHTML = GALLERY.map((g, i) => `
       <figure class="gitem" data-i="${i}" tabindex="0" role="button" aria-label="${T('js.openPhoto')}: ${L(g, 'cap')}">
-        <img src="assets/img/work/${g.src}-sm.jpg" alt="${L(g, 'cap')} ${T('js.by')}" loading="lazy" decoding="async" draggable="false">
+        <picture>
+          <source srcset="assets/img/work/${g.src}-sm.webp" type="image/webp">
+          <img src="assets/img/work/${g.src}-sm.jpg" alt="${L(g, 'cap')} ${T('js.by')}" width="640" height="640" loading="lazy" decoding="async" draggable="false">
+        </picture>
         <figcaption class="gitem__cap"><span>${L(g, 'cap')}</span><span>${L(g, 'type')}</span></figcaption>
       </figure>`).join('');
   };
