@@ -524,9 +524,13 @@ h1, h2, h3, h4, p { margin: 0; }
 .lang__btn.is-active { color: var(--gold); }
 .lang__sep { color: var(--line-strong); }
 .nav .lang { backdrop-filter: blur(8px); }
-@media (max-width: 980px) { .nav .lang { display: none; } }
-.mmenu__foot .lang { order: -1; width: 100%; justify-content: center; margin-bottom: 8px; }
-@media (min-width: 981px) { .mmenu__foot .lang { display: none; } }
+@media (max-width: 980px) {
+  .nav { padding: 0 16px; gap: 12px; }
+  .nav__cta { gap: 8px; }
+  .nav .lang { padding: 5px 8px; gap: 4px; font-size: 0.66rem; letter-spacing: 0.14em; }
+  .lang__btn { padding: 3px 4px; }
+  .nav__burger { width: 40px; margin-right: -6px; }
+}
 .mmenu__links a span { display: inline; }
 
 /* ---------- mobile pass ---------- */

@@ -33,7 +33,7 @@ If Jordy ever moves Booksy accounts, change `BOOKSY_ID` and `BOOKSY_URL` at the 
 
 ## Language toggle (EN / ES)
 
-The nav (and the mobile menu) has an EN / ES switch. Spanish is picked automatically for browsers set to Spanish, and the choice is remembered. Switching also flips every Booksy link to `booksy.com/es-us/…` and reloads the booking widget in Spanish.
+The nav has an EN / ES switch (on mobile it sits between the logo and the menu button). English is the default, Spanish is picked automatically for browsers set to Spanish, and the visitor's choice is remembered. Switching also flips every Booksy link to `booksy.com/es-us/…` and reloads the booking widget in Spanish.
 
 - Static text: every translatable element has a `data-i18n="key"`; English is whatever is in `index.html`, Spanish is the matching key in `js/i18n.js` (`I18N_ES`).
 - Data-driven text (services, gallery captions, house-call row): the `es` fields in `js/main.js`.

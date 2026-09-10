@@ -172,7 +172,7 @@ window.I18N_EN = {
   const detect = () => {
     try { const s = localStorage.getItem(KEY); if (s === 'en' || s === 'es') return s; } catch (_) {}
     const nav = (navigator.languages || [navigator.language || 'en']).map(l => l.toLowerCase());
-    return nav.some(l => l.startsWith('es')) ? 'es' : 'en';
+    return nav.some(l => l.startsWith('es')) ? 'es' : 'en'; // English unless the browser is set to Spanish
   };
 
   let lang = detect();
