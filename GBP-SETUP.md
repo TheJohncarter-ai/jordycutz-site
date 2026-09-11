@@ -27,9 +27,9 @@ requirements. ([Google photo guidelines](https://support.google.com/business/ans
 ## Step 1 — Retire the old "JordyCutz" listing first
 
 The old listing is at 1407 Forest Dr #1, marked "Located in: Mayer Barbershop", with the phone
-number (443) 746-1481, which is Mayer Barbershop's number, and a link to his old Booksy address. It has to go **before** the new
-profile exists. Otherwise Google may see the new one as a duplicate, since it's the same person
-and likely the same phone, and hide it.
+number (443) 746-1481, which is Mayer Barbershop's number, and a link to his old Booksy
+address. It has to go **before** the new profile exists. Otherwise Google may see the new one
+as a duplicate of the same person and hide it.
 
 **Do not claim it.** Claiming means verifying at Mayer's address, which is exactly the pattern
 to avoid.
