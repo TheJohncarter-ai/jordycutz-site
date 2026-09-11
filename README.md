@@ -59,6 +59,14 @@ That regenerates the Spanish page, refreshes both titles and `hreflang` blocks, 
 - Data-driven text (services, gallery captions, house-call row): the `es` fields in `js/main.js`.
 - Reviews stay in the language clients wrote them.
 
+## Content Security Policy
+
+`index.html` carries a Content-Security-Policy meta tag (GitHub Pages can't send headers).
+It allows only the site's own scripts, Google Fonts, and frames from Booksy and Google Maps.
+**If you add any new third-party script, font, image host, or embed, add its origin to that tag,
+then run `python build.py`** — otherwise the browser silently blocks it. Check the browser
+console for "Refused to load" messages after any such change.
+
 ## Editing content
 
 - **Prices / services:** `SERVICES` array in `js/main.js`. Keep it in sync with Booksy.
