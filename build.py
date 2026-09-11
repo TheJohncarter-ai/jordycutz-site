@@ -101,7 +101,7 @@ def main():
     doc = doc.replace('href="es/" data-lang="es"', 'href="./" data-lang="es"')
 
     # asset paths are relative -> step up one directory from /es/
-    doc = re.sub(r'(href|src)="(assets/|css/|js/)', r'\1="../\2', doc)
+    doc = re.sub(r'(href|src|srcset)="(assets/|css/|js/)', r'\1="../\2', doc)
     doc = doc.replace('href="#', 'href="#')  # anchors stay
     # Booksy links + widget in Spanish
     doc = doc.replace('booksy.com/en-us/', 'booksy.com/es-us/')

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://booksy.com https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Barbero a Domicilio en Annapolis, MD | Jordy Quiroz</title>
   <meta name="description" content="Barbero de lujo a domicilio en Annapolis, MD. Fades de precisión, barba esculpida y toalla caliente en tu casa, oficina o en el estudio de Forest Drive.">
   <meta name="theme-color" content="#0a0a0b">
@@ -534,7 +536,7 @@
     <section class="hero" id="hero">
       <div class="hero__media" data-parallax="0.04">
         <picture>
-          <source srcset="assets/img/work/fade-moody.webp" type="image/webp">
+          <source srcset="../assets/img/work/fade-moody.webp" type="image/webp">
           <img src="../assets/img/work/fade-moody.jpg" alt="Client with a fresh skin fade and sunglasses in Jordy Quiroz's chair" width="1024" height="1024" fetchpriority="high" decoding="async">
         </picture>
       </div>
@@ -798,7 +800,7 @@
           <a href="https://www.google.com/maps/dir/?api=1&destination=1407+Forest+Drive+Suite+1+Annapolis+MD+21403" target="_blank" rel="noopener" class="btn btn--ghost magnetic reveal" data-cursor="link"><span data-i18n="studio.dir">Cómo llegar</span></a>
         </div>
         <div class="studio__map reveal">
-          <iframe title="Map to Jordy Quiroz, 1407 Forest Drive, Annapolis" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+          <iframe title="Map to Jordy Quiroz, 1407 Forest Drive, Annapolis" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" allowfullscreen
             src="https://www.google.com/maps?q=1407+Forest+Drive+Suite+1+Annapolis+MD+21403&output=embed"></iframe>
         </div>
       </div>

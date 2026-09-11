@@ -6,6 +6,8 @@
    ===================================================================== */
 
 const BOOKSY_ID = 1071238;
+// Site root, derived from this script's URL, so image paths work from / and from /es/.
+const ASSET = (document.currentScript && new URL('../', document.currentScript.src).href) || '/';
 const HOUSE_CALL_PRICE = 200; // flat price for a house call, any services, travel included
 const BOOKSY_URL = 'https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis';
 
@@ -302,8 +304,8 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
     track.innerHTML = GALLERY.map((g, i) => `
       <figure class="gitem" data-i="${i}" tabindex="0" role="button" aria-label="${T('js.openPhoto')}: ${L(g, 'cap')}">
         <picture>
-          <source srcset="assets/img/work/${g.src}-sm.webp" type="image/webp">
-          <img src="assets/img/work/${g.src}-sm.jpg" alt="${L(g, 'cap')} ${T('js.by')}" width="640" height="640" loading="lazy" decoding="async" draggable="false">
+          <source srcset="${ASSET}assets/img/work/${g.src}-sm.webp" type="image/webp">
+          <img src="${ASSET}assets/img/work/${g.src}-sm.jpg" alt="${L(g, 'cap')} ${T('js.by')}" width="640" height="640" loading="lazy" decoding="async" draggable="false">
         </picture>
         <figcaption class="gitem__cap"><span>${L(g, 'cap')}</span><span>${L(g, 'type')}</span></figcaption>
       </figure>`).join('');
@@ -313,7 +315,7 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
   // lightbox
   const lb = $('#lightbox'), img = $('#lbImg'), cap = $('#lbCap');
   let cur = 0;
-  const show = i => { cur = (i + GALLERY.length) % GALLERY.length; const g = GALLERY[cur]; img.src = `assets/img/work/${g.src}.jpg`; img.alt = `${L(g, 'cap')} ${T('js.by')}`; cap.textContent = `${L(g, 'cap')} — ${L(g, 'type')} · ${cur + 1}/${GALLERY.length}`; };
+  const show = i => { cur = (i + GALLERY.length) % GALLERY.length; const g = GALLERY[cur]; img.src = `${ASSET}assets/img/work/${g.src}.jpg`; img.alt = `${L(g, 'cap')} ${T('js.by')}`; cap.textContent = `${L(g, 'cap')} — ${L(g, 'type')} · ${cur + 1}/${GALLERY.length}`; };
   const open = i => { show(i); lb.classList.add('is-open'); lb.setAttribute('aria-hidden', 'false'); document.body.classList.add('is-locked'); };
   const close = () => { lb.classList.remove('is-open'); lb.setAttribute('aria-hidden', 'true'); document.body.classList.remove('is-locked'); };
 

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-src https://booksy.com https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Mobile Barber Annapolis MD | Jordy Quiroz — Fades &amp; Beards</title>
   <meta name="description" content="Luxury mobile barber in Annapolis, MD. Precision fades, beard sculpting and hot-towel service at your home, office or the Forest Drive studio.">
   <meta name="theme-color" content="#0a0a0b">
@@ -800,7 +802,7 @@
           <a href="https://www.google.com/maps/dir/?api=1&destination=1407+Forest+Drive+Suite+1+Annapolis+MD+21403" target="_blank" rel="noopener" class="btn btn--ghost magnetic reveal" data-cursor="link"><span data-i18n="studio.dir">Get directions</span></a>
         </div>
         <div class="studio__map reveal">
-          <iframe title="Map to Jordy Quiroz, 1407 Forest Drive, Annapolis" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+          <iframe title="Map to Jordy Quiroz, 1407 Forest Drive, Annapolis" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" allowfullscreen
             src="https://www.google.com/maps?q=1407+Forest+Drive+Suite+1+Annapolis+MD+21403&output=embed"></iframe>
         </div>
       </div>
