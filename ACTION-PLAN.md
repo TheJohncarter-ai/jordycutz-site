@@ -1,4 +1,4 @@
-# Jordy Cutz — Growth Plan
+# Jordy Quiroz — Growth Plan
 
 Research date: 10 September 2026. Covers SEO, branding, PR, design, and the question of
 whether search rankings can be shortcut. Every claim below was either verified directly
@@ -151,6 +151,11 @@ that trigger removal of everything.
   story for anyone who checks.
 
 ### The name
+
+**Decided 11 September 2026: Jordy Quiroz**, with jordyquiroz.com. The site is rebranded.
+What remains is carrying the same name onto Booksy, Google, and Instagram. The analysis
+below is kept for the record.
+
 
 The brand is fragmented across three surfaces: Instagram is `@jordycutzb`, Booksy says
 "J.Barber 1", the site says "Jordy Cutz". Search engines can read inconsistent listings as

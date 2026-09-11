@@ -71,7 +71,7 @@ Positioning line for the site and Booksy: **"Studio pricing at the studio. House
 ## 5. Quick wins beyond pricing
 
 1. **Reviews.** 40 → 100 is the single biggest lever vs. the 189-review competitor. Add a "leave a review" link in Booksy's post-appointment message.
-2. **Booksy listing name.** "J.Barber 1" doesn't match "Jordy Cutz" on Instagram or the site. Renaming the Booksy business to "Jordy Cutz" would unify search results.
+2. **Booksy listing name.** "J.Barber 1" doesn't match "Jordy Cutz" on Instagram or the site. Renaming the Booksy business to "Jordy Quiroz", the name the site and domain now use, would unify search results.
 3. **Add a House Call service to Booksy** with the price above so clients can book it directly instead of leaving a note.
 4. **Gift cards** are already enabled on Booksy — promote them on the site before the holidays.
 5. **Bilingual advantage.** Annapolis has a large Spanish-speaking client base and few competitors advertise it. It's on the site; it should be on the Booksy description too.

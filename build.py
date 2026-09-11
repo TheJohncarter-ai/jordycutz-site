@@ -14,10 +14,10 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 BASE = 'https://thejohncarter-ai.github.io/jordycutz-site/'
 EN_URL, ES_URL = BASE, BASE + 'es/'
 
-EN_TITLE = 'Mobile Barber Annapolis MD | Jordy Cutz — Fades &amp; Beards'
+EN_TITLE = 'Mobile Barber Annapolis MD | Jordy Quiroz — Fades &amp; Beards'
 EN_DESC  = ('Luxury mobile barber in Annapolis, MD. Precision fades, beard sculpting and '
             'hot-towel service at your home, office or the Forest Drive studio.')
-ES_TITLE = 'Barbero a Domicilio en Annapolis, MD | Jordy Cutz'
+ES_TITLE = 'Barbero a Domicilio en Annapolis, MD | Jordy Quiroz'
 ES_DESC  = ('Barbero de lujo a domicilio en Annapolis, MD. Fades de precisión, barba '
             'esculpida y toalla caliente en tu casa, oficina o en el estudio de Forest Drive.')
 

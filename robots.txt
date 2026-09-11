@@ -1,4 +1,4 @@
-# Jordy Cutz — Luxury Mobile Barber, Annapolis MD
+# Jordy Quiroz — Luxury Mobile Barber, Annapolis MD
 User-agent: *
 Allow: /
 

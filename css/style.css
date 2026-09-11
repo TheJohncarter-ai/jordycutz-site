@@ -1,5 +1,5 @@
 /* =====================================================================
-   JORDY CUTZ — Luxury Mobile Barber
+   JORDY QUIROZ — Luxury Mobile Barber
    Obsidian + champagne gold. Refined, posh, hip-hop.
    ===================================================================== */
 
@@ -665,3 +665,15 @@ h1, h2, h3, h4, p { margin: 0; }
    `pretty` has no Firefox support yet and degrades to normal, which is fine. */
 .h2, .cta__title, .hero__title { text-wrap: balance; }
 .lede, .pillar p, .feature__copy > p, .faq__list details p { text-wrap: pretty; }
+
+/* JORDY QUIROZ is two letters longer than the old wordmark. Tighten it on
+   phones so it clears the language toggle and the menu button. */
+@media (max-width: 640px) {
+  .nav__word { font-size: 1.22rem; letter-spacing: 0.15em; }
+  .nav__mono { width: 32px; height: 32px; }
+  .nav__brand { gap: 10px; }
+}
+@media (max-width: 380px) {
+  .nav__word { font-size: 1.08rem; letter-spacing: 0.12em; }
+  .nav__mono { width: 28px; height: 28px; }
+}

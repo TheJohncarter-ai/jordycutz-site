@@ -1,6 +1,6 @@
-# Jordy Cutz — Luxury Mobile Barber
+# Jordy Quiroz — Luxury Mobile Barber
 
-Marketing site for **Jordy Cutz / J.Barber 1**, a 5.0-rated, Booksy-recommended barber in Annapolis, MD who also delivers the full experience as a house call.
+Marketing site for **Jordy Quiroz** (formerly branded Jordy Cutz; Booksy listing "J.Barber 1"), a 5.0-rated, Booksy-recommended barber in Annapolis, MD who also delivers the full experience as a house call.
 
 **Live site:** https://thejohncarter-ai.github.io/jordycutz-site/
 

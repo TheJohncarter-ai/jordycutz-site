@@ -1,5 +1,5 @@
 /* =====================================================================
-   JORDY CUTZ — main.js
+   JORDY QUIROZ — main.js
    Edit the DATA block to update services, photos, and reviews.
    Spanish copy for static HTML lives in js/i18n.js; data below carries
    its own `es` fields.
@@ -360,7 +360,7 @@ const L = (obj, field) => (I.lang === 'es' && obj.es && obj.es[field] != null) ?
   let loaded = false;
   const load = () => {
     loaded = true;
-    body.innerHTML = `<iframe title="Book with Jordy Cutz on Booksy" src="https://booksy.com/widget-2021/index.html?id=${BOOKSY_ID}&lang=${I.lang}&country=us&mode=iframe" loading="lazy" allow="payment"></iframe>`;
+    body.innerHTML = `<iframe title="Book with Jordy Quiroz on Booksy" src="https://booksy.com/widget-2021/index.html?id=${BOOKSY_ID}&lang=${I.lang}&country=us&mode=iframe" loading="lazy" allow="payment"></iframe>`;
   };
   btn.addEventListener('click', load);
   // auto-load when the booking section is near the viewport (desktop only, to save mobile data)

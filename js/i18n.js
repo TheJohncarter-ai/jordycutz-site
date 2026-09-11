@@ -1,5 +1,5 @@
 /* =====================================================================
-   JORDY CUTZ — i18n
+   JORDY QUIROZ — i18n
    English lives in index.html (captured at load). Spanish lives here.
    Keys map to data-i18n attributes. Values may contain HTML.
    ===================================================================== */
@@ -132,12 +132,12 @@ window.I18N_ES = {
   'js.houseTag': 'A domicilio',
   'js.housePrice': '$200',
   'js.houseTime': 'Precio único · cualquier servicio',
-  'js.by': 'por Jordy Cutz',
+  'js.by': 'por Jordy Quiroz',
   'js.cursorBook': 'RESERVA',
   'js.cursorDrag': 'ARRASTRA',
   'js.openPhoto': 'Abrir foto',
-  'js.title': 'Jordy Cutz — Barbero de Lujo a Domicilio · Annapolis, MD',
-  'js.desc': 'Jordy Cutz es un barbero de lujo en Annapolis, Maryland, con 5.0 estrellas y recomendado por Booksy. Fades de precisión, barbas esculpidas, diseños y ritual de toalla caliente — en el estudio o a domicilio. Reserva en Booksy.',
+  'js.title': 'Barbero a Domicilio en Annapolis, MD | Jordy Quiroz',
+  'js.desc': 'Barbero de lujo a domicilio en Annapolis, MD. Fades de precisión, barba esculpida y toalla caliente en tu casa, oficina o en el estudio de Forest Drive.',
 };
 
 // English strings used by main.js (HTML strings are captured from the DOM).
@@ -154,12 +154,12 @@ window.I18N_EN = {
   'js.houseTag': 'Mobile',
   'js.housePrice': '$200',
   'js.houseTime': 'Flat price · any services',
-  'js.by': 'by Jordy Cutz',
+  'js.by': 'by Jordy Quiroz',
   'js.cursorBook': 'BOOK',
   'js.cursorDrag': 'DRAG',
   'js.openPhoto': 'Open photo',
-  'js.title': 'Jordy Cutz — Luxury Mobile Barber · Annapolis, MD',
-  'js.desc': 'Jordy Cutz is a 5.0-rated, Booksy-recommended luxury barber in Annapolis, Maryland. Precision fades, sculpted beards, custom designs and hot-towel rituals — in the studio or delivered to your door. Book instantly on Booksy.',
+  'js.title': 'Mobile Barber Annapolis MD | Jordy Quiroz — Fades & Beards',
+  'js.desc': 'Luxury mobile barber in Annapolis, MD. Precision fades, beard sculpting and hot-towel service at your home, office or the Forest Drive studio.',
 };
 
 /* ---------- runtime ---------- */
