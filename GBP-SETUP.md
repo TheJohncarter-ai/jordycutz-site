@@ -1,46 +1,70 @@
-# Google Business Profile — setup kit for Jordy Quiroz
+# Google Business Profile — Jordy Quiroz, mobile barber
 
-This profile has to be created by Jordy, or by someone he authorizes, from a Google account the
-business controls. Google verifies the owner directly, usually with a short video. Everything
-else is prepared here so setup is copy and paste, and every value matches the website exactly.
-Consistent details across the site, Google, and Booksy are what let search engines treat them
-as one business.
+**Decided 11 September 2026:** Jordy's profile is a **mobile, service-area business of his own**.
+His studio chair stays under Mayer Barbershop's listing. His profile shares no address with
+Mayer or with Jeison.
+
+**Why this setup:**
+
+- **Same category at the same address means Google shows one listing and hides the rest.** That
+  is why the old "JordyCutz" listing never appears, even when searching his own name. It is
+  filtered behind Mayer Barbershop's.
+  ([Google: duplicate profiles](https://support.google.com/business/answer/12756178))
+- **A chair renter verifying at the salon's address can get both listings investigated.** That
+  would put Mayer's listing at risk too.
+  ([Local search practitioners](https://www.reinstatementninja.com/got-multiple-gmb-listings-at-the-same-address-heres-what-you-need-to-know))
+- **A mobile profile at his own hidden base address sits apart from both.** It can rank on its
+  own without anyone's listing being filtered.
+
+The profile has to be created by Jordy, or by someone he authorizes, from a Google account the
+business controls. Everything else is prepared here, and every value matches the website.
 
 Photos, logo, and cover are in the `gbp-kit` folder next to this file, sized to Google's
-requirements: JPG or PNG, 10 KB to 5 MB, at least 720 × 720 recommended.
-([Google photo guidelines](https://support.google.com/business/answer/6103862))
+requirements. ([Google photo guidelines](https://support.google.com/business/answer/6103862))
 
 ---
 
-## Before you start — five things only Jordy can settle
+## Step 1 — Retire the old "JordyCutz" listing first
 
-1. **Check whether a listing already exists.** Search Google Maps for "J.Barber 1", "Jordy Quiroz",
-   "Jordy Cutz", and "1407 Forest Dr Annapolis". If a listing for him shows up, choose
-   **Own this business?** and claim it. Do not create a second one. Duplicate listings are a
-   common suspension trigger.
+The old listing is at 1407 Forest Dr #1, marked "Located in: Mayer Barbershop", with the phone
+number (443) 746-1481 and a link to his old Booksy address. It has to go **before** the new
+profile exists. Otherwise Google may see the new one as a duplicate, since it's the same person
+and likely the same phone, and hide it.
 
-2. **Is there permanent signage at 1407 Forest Drive naming his business?** This decides the
-   setup, and getting it wrong is the riskiest mistake in the whole process.
-   - **Yes, his name is on the sign** → use **Setup A**: show the address and add service areas.
-   - **No, or the sign names someone else's shop** → use **Setup B**: service-area business
-     with the address hidden. This still ranks, and it is the safe choice when unsure.
-     Another barber operates from the same building, which raises Google's scrutiny.
+**Do not claim it.** Claiming means verifying at Mayer's address, which is exactly the pattern
+to avoid.
 
-3. **A phone number.** The website has none yet, and Google uses it for verification and calls.
-   A dedicated business line is best; Google Voice is free. Once there's a number, the same one
-   goes on the profile, the website, and Booksy.
+- **If Jordy can still sign in to the Google account he created it with:** open the profile,
+  go to business information, and choose **Mark business as permanently closed**. Don't use
+  "Remove Business Profile" instead. That only removes him as manager, and the listing stays
+  public.
+- **If he can't access that account:** open JordyCutz on Google Maps, choose
+  **Suggest an edit → Close or remove → Permanently closed**. Google reviews the suggestion.
 
-4. **The Google account.** Use an account the business controls, not a personal one that might
-   be abandoned later. After setup, add John as a **Manager** so he can help without holding
-   the ownership.
-
-5. **Rename Booksy first.** The profile name must match how the business presents itself. The
-   website says Jordy Quiroz, Booksy still says "J.Barber 1". Edit the existing Booksy listing's
-   name — never create a new one, or the 40 reviews stay behind.
+A closed listing fades from search and is then removed. This one has no reviews, so nothing is
+lost. **Wait until Maps shows it as permanently closed before Step 3.**
 
 ---
 
-## Step by step
+## Step 2 — Settle four things first
+
+1. **His base address.** Google needs a real address where the mobile business is run from,
+   usually home, for verification. It stays hidden from the public. **Never 1407 Forest Dr.**
+
+2. **The phone number.** If (443) 746-1481 is his, use it. The same number then goes on the
+   profile, the website, and Booksy.
+
+3. **The Google account.** Use an account the business controls, not a personal one that might
+   be abandoned. After setup, add John as a **Manager** so he can help without holding
+   ownership.
+
+4. **Finish Booksy.** Booksy now reads "JordyQuiroz". Add the space so it reads
+   **Jordy Quiroz**, correct the ZIP from 21401 to **21403**, and add the **House Call** as a
+   mobile service. Right now the $200 product can't be booked there.
+
+---
+
+## Step 3 — Create the profile
 
 Go to [business.google.com](https://business.google.com) and choose **Add business**.
 
@@ -49,19 +73,20 @@ Go to [business.google.com](https://business.google.com) and choose **Add busine
 | Business name | `Jordy Quiroz` |
 | Primary category | `Barber shop` |
 | Additional category | `Hairdresser` — nothing else. Extra categories for services he doesn't offer can trigger suspension. |
-| Customers visit your location? | **Setup A:** Yes · **Setup B:** No |
-| Address (Setup A only) | `1407 Forest Drive, Suite 1, Annapolis, MD 21403` |
+| Customers visit your location? | **No** |
+| Business address | His base address from Step 2. Google keeps it hidden. |
 | Serve customers outside that location? | Yes |
 | Service areas | The 13 below, one at a time |
 | Phone | Jordy's business number |
 | Website | `https://jordyquiroz.com/` |
-| Hours | Every day, 8:00 AM – 7:00 PM |
+| Hours | His true hours. The website and Booksy say every day 8 AM – 7 PM. The old Google listing said 9 AM – 8 PM. Pick one and use it everywhere. |
 
 **Do not add anything to the name.** "Jordy Quiroz Mobile Barber Annapolis" gets profiles
-suspended. The descriptive words belong in the description and services.
+suspended. Descriptive words belong in the description and services.
 
-**The ZIP is 21403.** Booksy currently shows 21401, which is wrong. The USPS geocoder confirms
-21403 for this address.
+**What keeps him separate from Jeison:** a different name, no shared address, his own phone
+number, his own website, and his own photos. Both can use the Barber shop category because
+they no longer share an address.
 
 ### Service areas
 
@@ -71,30 +96,19 @@ Annapolis · Parole · Edgewater · Riva · Arnold · Cape St. Claire · Severna
 Crofton · Davidsonville · Gambrills · Bowie · Kent Island
 
 Google allows up to 20, within about two hours' drive. Add more only where he'll genuinely
-travel; a wider area dilutes relevance without adding reach.
-([Google service-area rules](https://support.google.com/business/answer/9157481))
+travel. ([Google service-area rules](https://support.google.com/business/answer/9157481))
 
 ---
 
-## Description — pick the one that matches the setup
+## Description
 
-The limit is 750 characters. Both are under it. Neither includes prices, links, or ratings,
-which belong in other fields.
-
-**Setup A — studio plus house calls**
-
-```text
-Jordy Quiroz is a bilingual barber in Annapolis, Maryland. Take the chair at the Forest Drive studio, or book a house call and the full setup comes to your home, office, hotel or event: chair, cape, tools and hot towels. Services include low, mid and high fades, tapers, line-ups, beard sculpting, hot-towel shaves and custom hair designs. Jordy works in English and Spanish and serves Annapolis and Anne Arundel County, seven days a week by appointment. Hablamos español.
-```
-
-**Setup B — service-area business**
+The limit is 750 characters. This is well under it and contains no prices, links, or ratings,
+which belong in other fields. It leaves out the studio on purpose: the profile is the mobile
+business, and the chair belongs to Mayer's listing.
 
 ```text
 Jordy Quiroz is a bilingual mobile barber serving Annapolis and Anne Arundel County, Maryland. Book a house call and the full setup comes to your home, office, hotel or event: chair, cape, tools and hot towels. Services include low, mid and high fades, tapers, line-ups, beard sculpting, hot-towel shaves and custom hair designs. Jordy works in English and Spanish, seven days a week by appointment. Hablamos español.
 ```
-
-Setup B leaves out the studio on purpose. With the address hidden, pointing people to a
-location they can't see would contradict the listing.
 
 ---
 
@@ -107,6 +121,7 @@ services. Prices match the website, which lists regular prices rather than Books
 
 | Service | Price | Description |
 |---|---|---|
+| House Call | $200 | Any services from the menu at your home, office, hotel or event, one flat price per visit. Chair, cape, tools and hot towels included, with travel across Anne Arundel County. |
 | Fade | $40 | Low, mid or high fade. Clean, modern and seamless, short to long with no lines. About 40 minutes. |
 | Taper | $40 | Low, mid or high taper. Tight around the edges with weight kept up top. About 35 minutes. |
 | Haircut & Beard with Hot Towel | $50 | Fade or taper plus beard alignment and profiling, steam, hot towel massage and a razor finish. The signature service, about 45 minutes. |
@@ -117,7 +132,6 @@ services. Prices match the website, which lists regular prices rather than Books
 | Line Up | $25 | Crisp edges from hairline to nape. About 30 minutes. |
 | Design + Fade | $50 | Custom hair design with a fade: lines, arrows, logos or lettering. Bring a reference. About 55 minutes. |
 | Kids Haircut | $30 | Regular cut or fade for kids, with patience. About 30 minutes. |
-| House Call | $200 | Any services from the menu at your home, office, hotel or event, one flat price per visit. Chair, cape, tools and hot towels included, with travel across Anne Arundel County. |
 
 ---
 
@@ -126,7 +140,7 @@ services. Prices match the website, which lists regular prices rather than Books
 Only set what's true:
 
 - **Appointments** — online appointments through Booksy.
-- **Onsite services** — yes, for house calls.
+- **Onsite services** — yes.
 - **Language** — Spanish, if Google offers it for this category.
 - **Latino-owned** — Google offers an "identifies as" attribute. It's Jordy's choice whether to show it.
 - **Payments** — whatever he actually accepts.
@@ -152,27 +166,29 @@ The `gbp-kit` folder holds:
   with it appearing on Google.
 - **Three low-resolution shots** that fall under Google's recommended size.
 
-**What he should shoot fresh**, because Google weighs real, recent photos and the kit can't
-supply them:
+**What he should shoot fresh**, because Google weighs real, recent photos:
 
-- The storefront or entrance, with signage visible (Setup A only)
-- The chair and station inside
-- The house-call kit unpacked in a client's space
-- Jordy himself at work
+- The house-call kit packed, then unpacked and set up in a client's space
+- Jordy at work on a house call
+- Finished cuts, with the client's permission
+
+Skip storefront shots. The shop is Mayer's, and the profile is his mobile business.
 
 Aim for a few new photos a week once the profile is live. Don't add location tags to them.
-Testing showed it does nothing, and Google's own staff have said so.
+Testing showed it does nothing.
 
 ---
 
 ## Verification
 
-Google will offer one or more methods. Video is the most common now. It's usually a single
-unedited clip that shows:
+Google will offer one or more methods. For a service-area business, video is the most common.
+It's usually a single unedited clip that shows:
 
-- The street or area, so Google can match the location
-- The signage or the business equipment and tools
-- Proof that he manages the business, such as opening the Booksy dashboard or business paperwork
+- The area around his base address, so Google can match the location
+- His barbering equipment and mobile kit
+- Proof that he manages the business, such as opening the Booksy dashboard
+
+**Film at his base, not at Mayer's shop.**
 
 Photos and edits don't appear publicly until verification is done.
 
@@ -185,11 +201,14 @@ a suspension trigger. After that, change one thing at a time.
 
 Then, in order:
 
-1. **Connect Booksy.** Booksy's **Reserve with Google** puts a Book button on the profile. It
-   supports mobile services, so the house call can be booked from Google.
+1. **Connect Booksy.** Booksy's **Reserve with Google** puts a Book button on the profile. After
+   connecting, open his profile on Google and check that the button appears **there**, not on
+   Mayer's listing. Booksy lists the shop address, so confirm it attached to the right profile.
 2. **Get the review link.** In the profile, choose **Ask for reviews** and copy the short link.
-3. **Start asking every client.** The same words every time, at the mirror, then hand them the
-   link or a QR code to use later on their own phone.
+   His Google reviews have been landing on Mayer's listing until now, so from here on every
+   client gets **his** link.
+3. **Start asking every client.** The same words every time, at the end of the cut, then hand
+   them the link or a QR code to use later on their own phone.
 
    > If you're happy with it, would you leave me a Google review? It takes twenty seconds.
 
@@ -216,7 +235,8 @@ Post one a week. Each has a photo from the kit and a **Book** button pointing to
 > About 45 minutes.
 
 **Week 3 — En español** · photo `work-fade-curls.jpg`
-> Hablamos español. Fades, cortes y barba con toalla caliente, en el estudio o a domicilio.
+> Hablamos español. Fades, cortes y barba con toalla caliente, a domicilio en Annapolis y todo
+> el condado de Anne Arundel.
 
 **Week 4 — Custom designs** · photo `work-design-cross.jpg`
 > Lines, arrows, logos, lettering. Bring the idea, leave with it cut in.
@@ -227,9 +247,8 @@ Post one a week. Each has a photo from the kit and a **Book** button pointing to
 
 - The profile's share link
 - The review link from **Ask for reviews**
-- The phone number, if there is one
+- The phone number, and his true hours
 
-With those, the website gets a "Review us on Google" button, a printable QR card for the
-chair, the phone number as a tap-to-call link, and a link from the site's structured data to
-the profile, which is one of the clearest signals that the website and the listing are the
-same business.
+With those, the website gets a "Review us on Google" button, a printable QR card, the phone
+number as a tap-to-call link, and a link from the site's structured data to the profile, which
+is one of the clearest signals that the website and the listing are the same business.
