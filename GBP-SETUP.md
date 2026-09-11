@@ -27,7 +27,7 @@ requirements. ([Google photo guidelines](https://support.google.com/business/ans
 ## Step 1 — Retire the old "JordyCutz" listing first
 
 The old listing is at 1407 Forest Dr #1, marked "Located in: Mayer Barbershop", with the phone
-number (443) 746-1481 and a link to his old Booksy address. It has to go **before** the new
+number (443) 746-1481, which is Mayer Barbershop's number, and a link to his old Booksy address. It has to go **before** the new
 profile exists. Otherwise Google may see the new one as a duplicate, since it's the same person
 and likely the same phone, and hide it.
 
@@ -51,16 +51,17 @@ lost. **Wait until Maps shows it as permanently closed before Step 3.**
 1. **His base address.** Google needs a real address where the mobile business is run from,
    usually home, for verification. It stays hidden from the public. **Never 1407 Forest Dr.**
 
-2. **The phone number.** If (443) 746-1481 is his, use it. The same number then goes on the
-   profile, the website, and Booksy.
+2. **His own phone number.** (443) 746-1481 is Mayer Barbershop's number, so it can't go on
+   his profile. He needs a number of his own for the business; Google Voice is free. That
+   number then goes on the profile, the website, and Booksy.
 
 3. **The Google account.** Use an account the business controls, not a personal one that might
    be abandoned. After setup, add John as a **Manager** so he can help without holding
    ownership.
 
 4. **Finish Booksy.** Booksy now reads "JordyQuiroz". Add the space so it reads
-   **Jordy Quiroz**, correct the ZIP from 21401 to **21403**, and add the **House Call** as a
-   mobile service. Right now the $200 product can't be booked there.
+   **Jordy Quiroz**, correct the ZIP from 21401 to **21403**, change the hours to
+   **9 AM – 8 PM**, and add the **House Call** as a mobile service. Right now the $200 product can't be booked there.
 
 ---
 
@@ -77,9 +78,9 @@ Go to [business.google.com](https://business.google.com) and choose **Add busine
 | Business address | His base address from Step 2. Google keeps it hidden. |
 | Serve customers outside that location? | Yes |
 | Service areas | The 13 below, one at a time |
-| Phone | Jordy's business number |
+| Phone | His own number, not Mayer's |
 | Website | `https://jordyquiroz.com/` |
-| Hours | His true hours. The website and Booksy say every day 8 AM – 7 PM. The old Google listing said 9 AM – 8 PM. Pick one and use it everywhere. |
+| Hours | Every day, 9:00 AM – 8:00 PM |
 
 **Do not add anything to the name.** "Jordy Quiroz Mobile Barber Annapolis" gets profiles
 suspended. Descriptive words belong in the description and services.
@@ -247,7 +248,7 @@ Post one a week. Each has a photo from the kit and a **Book** button pointing to
 
 - The profile's share link
 - The review link from **Ask for reviews**
-- The phone number, and his true hours
+- His own phone number
 
 With those, the website gets a "Review us on Google" button, a printable QR card, the phone
 number as a tap-to-call link, and a link from the site's structured data to the profile, which
