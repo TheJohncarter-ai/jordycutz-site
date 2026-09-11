@@ -11,7 +11,7 @@ Run after editing index.html or js/i18n.js:    python build.py
 import json, re, os, sys, html as htmllib
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-BASE = 'https://thejohncarter-ai.github.io/jordycutz-site/'
+BASE = 'https://jordyquiroz.com/'
 EN_URL, ES_URL = BASE, BASE + 'es/'
 
 EN_TITLE = 'Mobile Barber Annapolis MD | Jordy Quiroz — Fades &amp; Beards'

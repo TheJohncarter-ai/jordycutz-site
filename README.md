@@ -2,7 +2,7 @@
 
 Marketing site for **Jordy Quiroz** (formerly branded Jordy Cutz; Booksy listing "J.Barber 1"), a 5.0-rated, Booksy-recommended barber in Annapolis, MD who also delivers the full experience as a house call.
 
-**Live site:** https://thejohncarter-ai.github.io/jordycutz-site/
+**Live site:** https://jordyquiroz.com/
 
 - Booksy: https://booksy.com/en-us/1071238_j-barber-1_barber-shop_22531_annapolis
 - Instagram: https://www.instagram.com/jordycutzb

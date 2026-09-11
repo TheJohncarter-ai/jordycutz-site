@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thejohncarter-ai.github.io/jordycutz-site/sitemap.xml
+Sitemap: https://jordyquiroz.com/sitemap.xml
